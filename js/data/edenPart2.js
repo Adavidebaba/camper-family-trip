@@ -1,13 +1,77 @@
 /**
  * Dati Tappe 6 - 10 per l'itinerario con Eden (20 - 24 Settembre 2026)
- * Basi: fine Comano (Base 2), Lago di Levico (Base 3, notti 1-3) e inizio Lazise (Base 4, notte 1)
+ * Basi: Comano (Base 2, notti 2-3/3) e Lago di Levico (Base 3, notti 1-3/3)
  */
 export const EDEN_PART_2 = [
   {
     id: 6,
     dayNumber: 6,
     date: '20 Set',
-    title: 'Escursione Facoltativa alle Palafitte di Fiavé',
+    title: 'La Quiete del Parco Termale di Comano e il Torrente Sarca',
+    route: 'Spostamenti a piedi a Ponte Arche / Comano',
+    distanceKm: 0,
+    drivingTime: '0 min (Camper fermo)',
+    altitudeMeters: 400,
+    baseName: 'Ponte Arche / Comano (Base 2)',
+    nightsInBase: 3,
+    mobility: 'Carrozzina',
+    summary: 'Giornata interamente stanziale a ritmo lento: viali alberati del Parco Termale, aria pura della Val Giudicarie e relax assoluto con carrozzina lungo il torrente Sarca.',
+    coordinates: [46.0358, 10.8732],
+    schedule: [
+      { time: '09:30', activity: 'Risveglio dolce e poppata in camper riscaldato', note: 'Aria fresca e frizzante del mattino montano (400 m slm)' },
+      { time: '10:30', activity: 'Passeggiata sotto i grandi abeti e faggi del Parco Termale', note: '14 ettari interamente chiusi al traffico con viali in asfalto vellutato' },
+      { time: '12:30', activity: 'Pranzo in camper o al bistrot del parco termale', note: 'Riposino pomeridiano di Eden nella quiete della piazzola' },
+      { time: '15:30', activity: 'Seconda passeggiata lungo il ponte pedonale sul Sarca', note: 'Suono rilassante dell’acqua corrente che favorisce il sonno del bebè' },
+      { time: '18:00', activity: 'Spuntino con succo di mela trentino e prodotti del Bleggio', note: 'Serata tranquilla al calduccio del camper' }
+    ],
+    morningProposal: {
+      title: 'I Sentieri Ombreggiati del Parco Termale',
+      description: 'Passeggiata silenziosa tra scoiattoli e alberi secolari con asfalto perfetto per la carrozzina.',
+      timeEstimate: '2h di cammino rilassato'
+    },
+    afternoonProposal: {
+      title: 'Lungo il Fiume Sarca & Ponte Storico',
+      description: 'Affaccio panoramico sul corso d’acqua montano e panchine al sole mite pomeridiano.',
+      timeEstimate: '1h30'
+    },
+    rainPlan: {
+      title: 'Hall Termale e Porticato di Comano',
+      indoorActivity: 'La grande galleria termale è riscaldata, silenziosa e dotata di fasciatoi e comode poltrone per l’allattamento.',
+      notes: 'Ambiente salubre e protetto dalla pioggia.'
+    },
+    walkDetails: {
+      pathName: 'Viali del Parco delle Terme di Comano',
+      surface: 'Asfalto perfetto e vialetti complanari lisci',
+      strollerAccessibility: '100% accessibile senza dislivelli',
+      shadeLevel: 'Massima (abeti, castagni e tigli centenari)'
+    },
+    camperStop: {
+      name: 'Area Camper Ponte Arche (via Lungo Sarca)',
+      coordinates: [46.0358, 10.8732],
+      has220V: true,
+      services: 'Allaccio 220V attivo',
+      notes: 'Seconda notte nella stessa piazzola: stabilità ideale per il sonno di Eden'
+    },
+    babyTips: {
+      feedingSpots: 'Panchine vicino al laghetto delle ninfee del parco',
+      diaperPoints: 'Camper a soli 5 minuti a piedi',
+      comfortNotes: 'Clima eccellente senza afa, perfetto per la pelle delicata del neonato'
+    },
+    medicalNearby: {
+      pharmacy: 'Farmacia Comano Terme - Ponte Arche (Tel. 0465 701235)',
+      urgentCare: 'Guardia Medica Ponte Arche (a 400 m) / Ospedale di Tione (15 km)',
+      emergencyPhone: '112'
+    },
+    gastronomy: {
+      dishes: ['Canederli trentini in brodo', 'Strangolapreti al burro e salvia', 'Torta di noci'],
+      recommendedSpots: 'Ristorante Giardino a Ponte Arche o cucina calda in camper'
+    }
+  },
+  {
+    id: 7,
+    dayNumber: 7,
+    date: '21 Set',
+    title: 'Archeo-Parco Fiavé (UNESCO) e Opzione Molveno',
     route: 'Ponte Arche ↔ Fiavé (8 km)',
     distanceKm: 16,
     drivingTime: '15 min a tratta',
@@ -15,10 +79,10 @@ export const EDEN_PART_2 = [
     baseName: 'Ponte Arche / Comano (Base 2)',
     nightsInBase: 3,
     mobility: 'Carrozzina',
-    summary: 'Breve gita facoltativa verso l’Altopiano di Fiavé (quota 660 m, perfettamente sicura per la neonata). Passerella in legno pianeggiante nel Parco Archeo-Natura.',
+    summary: 'Breve gita verso l’Altopiano di Fiavé (quota 660 m, ideale per neonati). Passerella in legno pianeggiante nel Parco Archeo-Natura delle palafitte e rientro a Comano.',
     coordinates: [46.0028, 10.8422],
     schedule: [
-      { time: '10:00', activity: 'Breve spostamento col camper fino al parcheggio del Parco Palafitte di Fiavé', note: 'Ampio parcheggio piana all’ingresso' },
+      { time: '10:00', activity: 'Breve spostamento col camper fino al parcheggio del Parco Palafitte di Fiavé', note: 'Ampio parcheggio piano all’ingresso' },
       { time: '10:30', activity: 'Passeggiata sulla passerella in legno delle palafitte UNESCO', note: 'Tutto su passerella piana sopraelevata sul biotopo lacustre, 100% adatta a carrozzina' },
       { time: '12:30', activity: 'Pausa poppata nel centro visitatori e rientro al camper', note: 'Pranzo sereno e cambio pannolino' },
       { time: '14:00', activity: 'Rientro alla base di Ponte Arche', note: 'Pomeriggio tranquillo senza ulteriori spostamenti' },
@@ -49,7 +113,7 @@ export const EDEN_PART_2 = [
       name: 'Area Camper Ponte Arche (via Lungo Sarca)',
       coordinates: [46.0358, 10.8732],
       has220V: true,
-      services: 'Allaccio 220V, carico acqua pulita prima del trasferimento',
+      services: 'Allaccio 220V, carico acqua pulita prima del trasferimento di domani',
       notes: 'Terza e ultima notte a Comano Terme'
     },
     babyTips: {
@@ -74,9 +138,9 @@ export const EDEN_PART_2 = [
     }
   },
   {
-    id: 7,
-    dayNumber: 7,
-    date: '21 Set',
+    id: 8,
+    dayNumber: 8,
+    date: '22 Set',
     title: 'Attraversamento verso la Valsugana e il Lago di Levico',
     route: 'Ponte Arche → Trento → Lago di Levico',
     distanceKm: 58,
@@ -88,10 +152,10 @@ export const EDEN_PART_2 = [
     summary: 'Trasferimento agevole verso la Valsugana scendendo verso Trento e risalendo la SS47 a 4 corsie. Arrivo al Lido di Levico per 3 notti in riva al lago.',
     coordinates: [46.0089, 11.3039],
     schedule: [
-      { time: '10:00', activity: 'Partenza post-poppata da Comano verso la Gardesana / Trento', note: 'Strada scorrevole con tunnel ben illuminati' },
+      { time: '10:00', activity: 'Partenza post-poppata da Comano verso Trento sulla Gardesana', note: 'Strada scorrevole con tunnel ben illuminati' },
       { time: '11:15', activity: 'Transito per Trento e imbocco della Valsugana SS47', note: 'Percorso veloce e senza curve brusche' },
       { time: '11:45', activity: 'Arrivo all’Area Sosta Camper sul Lago di Levico', note: 'Posizionamento vicino alla riva, allaccio 220V' },
-      { time: '13:00', activity: 'Pranzo con vista sulle acque smeraldo del lago', note: 'Pranzo rilassato in veranda' },
+      { time: '13:00', activity: 'Pranzo con vista sulle acque smeraldo del lago', note: 'Pranzo rilassato in camper' },
       { time: '15:30', activity: 'Passeggiata con carrozzina sul Lido di Levico', note: 'Pista ciclopedonale asfaltata e prati verdi a pelo d’acqua' }
     ],
     morningProposal: {
@@ -106,7 +170,7 @@ export const EDEN_PART_2 = [
     },
     rainPlan: {
       title: 'Ristorante Bar del Lido di Levico',
-      indoorActivity: 'Locale ampio con ampie vetrate panoramiche sulle acque del lago, caldo e con spazi larghi per la carrozzina.',
+      indoorActivity: 'Locale ampio con grandi vetrate panoramiche sulle acque del lago, caldo e con spazi larghi per la carrozzina.',
       notes: 'Possibilità di sostare al coperto gustando una cioccolata calda o tè.'
     },
     walkDetails: {
@@ -120,7 +184,7 @@ export const EDEN_PART_2 = [
       coordinates: [46.0065, 11.2982],
       has220V: true,
       services: 'Allaccio 220V, camper service completo, docce, accesso immediato al lido',
-      notes: 'Base magnifica: permette di vivere il lago a piedi ogni giorno. Alternativa: Camping Lago di Levico.'
+      notes: 'Base magnifica: permette di vivere il lago a piedi ogni giorno. Prima notte a Levico.'
     },
     freeCamperAlternatives: [
       { name: "Area Sosta Camper Gratuita Pergine", location: "Via S. Pietro, Pergine Valsugana", rating: "4.5 / 5", services: "Punto sosta comunale gratuito a 3 km dal Lago di Caldonazzo e 10 min da Levico", whyOmittedNote: "Dista circa 10 km dal Lago di Levico e dal Parco Asburgico; richiede l'uso quotidiano del camper per ogni spostamento verso le passeggiate." },
@@ -148,8 +212,8 @@ export const EDEN_PART_2 = [
   },
   {
     id: 8,
-    dayNumber: 8,
-    date: '22 Set',
+    dayNumber: 9,
+    date: '23 Set',
     title: 'La Strada dei Pescatori e il Prato sul Lago',
     route: 'Spostamenti a piedi a Levico Terme',
     distanceKm: 0,
@@ -180,7 +244,7 @@ export const EDEN_PART_2 = [
     rainPlan: {
       title: 'Centro Storico Coperto di Levico Terme',
       indoorActivity: 'Porticati e bar storici lungo Via Dante e Piazza della Chiesa a Levico paese.',
-      notes: 'Possibilità di raggiungere il paese in camper o taxi breve in caso di pioggia battente.'
+      notes: 'Possibilità di raggiungere il paese a piedi o taxi breve in caso di pioggia.'
     },
     walkDetails: {
       pathName: 'Strada dei Pescatori - Settore Sud',
@@ -211,11 +275,11 @@ export const EDEN_PART_2 = [
     }
   },
   {
-    id: 9,
-    dayNumber: 9,
-    date: '23 Set',
+    id: 10,
+    dayNumber: 10,
+    date: '24 Set',
     title: 'Il Parco Monumentale Asburgico e il Borgo di Levico',
-    route: 'Spostamenti a piedi / navetta a Levico Terme',
+    route: 'Spostamenti a piedi a Levico Terme',
     distanceKm: 0,
     drivingTime: '0 min (Camper fermo)',
     altitudeMeters: 500,
@@ -229,7 +293,7 @@ export const EDEN_PART_2 = [
       { time: '10:30', activity: 'Passeggiata sotto le tuie giganti e le sequoie secolari', note: 'Aria fresca e profumata, massima ombra e silenzio' },
       { time: '12:30', activity: 'Pranzo in centro a Levico lungo Via Regia o rientro in piazzola', note: 'I portici e i caffè storici asburgici' },
       { time: '15:30', activity: 'Visita alla Villa Sissi e all’anello floreale centrale', note: 'Fontane d’acqua limpida e panchine comode per l’allattamento' },
-      { time: '18:00', activity: 'Rientro all’area camper sul lago e preparativi per il trasferimento di domani', note: 'Chiusura terza notte in Valsugana' }
+      { time: '18:00', activity: 'Rientro all’area camper sul lago e preparativi per il trasferimento sul Garda di domani', note: 'Chiusura terza notte in Valsugana' }
     ],
     morningProposal: {
       title: 'Parco Asburgico delle Terme',
@@ -272,70 +336,6 @@ export const EDEN_PART_2 = [
     gastronomy: {
       dishes: ['Speck trentino artigianale tagliato al coltello', 'Formaggio Lagorai'],
       recommendedSpots: 'Bottega dei Sapori di Levico (Via Regia)'
-    }
-  },
-  {
-    id: 10,
-    dayNumber: 10,
-    date: '24 Set',
-    title: 'Discesa verso il Basso Garda e il Borgo Scaligero di Lazise',
-    route: 'Levico Terme → Rovereto → Lazise',
-    distanceKm: 110,
-    drivingTime: '1h30–2h',
-    altitudeMeters: 75,
-    baseName: 'Lazise (Base 4)',
-    nightsInBase: 3,
-    mobility: 'Carrozzina',
-    summary: 'Discesa graduale lungo la Val d’Adige verso la sponda veronese del Lago di Garda. Arrivo a Lazise e prima passeggiata al porto vecchio e chiesetta di San Nicolò.',
-    coordinates: [45.5056, 10.7328],
-    schedule: [
-      { time: '10:00', activity: 'Partenza da Levico scendendo sulla SS47 e A22 del Brennero', note: 'Discesa a bassa quota verso il clima caldo e temperato del lago di Garda' },
-      { time: '11:45', activity: 'Uscita ad Affi e arrivo a Lazise', note: 'Posizionamento camper al Parcheggio Marra o Camping du Parc, a 5-10 min a piedi dal centro' },
-      { time: '13:00', activity: 'Pranzo in camper e poppata di benvenuto nel veronese', note: 'Clima molto mite rispetto ai monti' },
-      { time: '16:00', activity: 'Prima passeggiata al porto vecchio di Lazise e chiesetta di San Nicolò', note: 'Porto veneziano con gondole, lastricato liscio e mura possenti' },
-      { time: '18:30', activity: 'Aperitivo lungolago e tramonto infuocato sulla sponda bresciana', note: 'Spettacolo imperdibile con le luci della sera' }
-    ],
-    morningProposal: {
-      title: 'Discesa panoramica della Val d’Adige',
-      description: 'Percorso veloce e fluido su autostrada a 4 corsie tra vigneti di Teroldego e castelli trentini.',
-      timeEstimate: '1h30 di guida dolce'
-    },
-    afternoonProposal: {
-      title: 'Porto Vecchio di Lazise & Chiesetta di San Nicolò',
-      description: 'L’antico porto lacustre medievale circondato da caffè e viali pavimentati.',
-      timeEstimate: '1h30 a piedi con carrozzina'
-    },
-    rainPlan: {
-      title: 'Dogana Veneta Coperta & Porticati di Lazise',
-      indoorActivity: 'La Dogana Veneta del Trecento affacciata sull’acqua e i portici del corso principale offrono protezione totale.',
-      notes: 'Superfici piatte e comode per la carrozzina.'
-    },
-    walkDetails: {
-      pathName: 'Porto Vecchio & Lungolago Marconi',
-      surface: 'Lastricato in marmo liscio e cubetti di porfido complanari',
-      strollerAccessibility: '100% accessibile senza alcuna barriera',
-      shadeLevel: 'Tamerici e platani sul lungolago'
-    },
-    camperStop: {
-      name: 'Parcheggio Camper Marra (Lazise - via Prà del Principe)',
-      coordinates: [45.5038, 10.7352],
-      has220V: true,
-      services: 'Allaccio 220V, carico/scarico, a 300 metri dalle mura storiche e dal porto',
-      notes: 'Posizione insuperabile per vivere Lazise a piedi senza mai toccare il camper. Alternativa: Camping du Parc.'
-    },
-    babyTips: {
-      feedingSpots: 'Panchine in pietra fronte acqua vicino alla Dogana Veneta',
-      diaperPoints: 'Camper vicinissimo a 5 minuti a piedi dal centro',
-      comfortNotes: 'Lazise a fine settembre gode di un tepore ideale per tenere Eden all’aperto'
-    },
-    medicalNearby: {
-      pharmacy: 'Farmacia San Marco - Via Fontana 14, Lazise (Tel. 045 7580045)',
-      urgentCare: 'Clinica Pederzoli di Peschiera del Garda (a 8 km) / Polo Pediatrico Borgo Trento Verona (25 min)',
-      emergencyPhone: '112'
-    },
-    gastronomy: {
-      dishes: ['Risotto al pesce persico del Garda', 'Luccio in salsa con polenta brustolà', 'Vino Bardolino DOC'],
-      recommendedSpots: 'Trattoria Alla Grotta o Ristorante Il Porticciolo (tavoli all’aperto spaziosi)'
     }
   }
 ];

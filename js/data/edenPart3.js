@@ -1,12 +1,84 @@
 /**
- * Dati Tappe 11 - 16 per l'itinerario con Eden (25 - 30 Settembre 2026)
- * Basi: fine Lazise (Base 4), Sarzana e Val di Magra (Base 5, notti 1-3) e Rientro a Pisa
+ * Dati Tappe 11 - 15 per l'itinerario con Eden (25 - 29 Settembre 2026)
+ * Basi: Lazise (Base 4, notti 1-3/3), Lucca (Notte 14 Strategica) e Rientro a Pisa alle 11:00
  */
 export const EDEN_PART_3 = [
   {
     id: 11,
     dayNumber: 11,
     date: '25 Set',
+    title: 'Discesa verso il Basso Garda e il Borgo Scaligero di Lazise',
+    route: 'Levico Terme → Rovereto → Lazise',
+    distanceKm: 110,
+    drivingTime: '1h30–2h',
+    altitudeMeters: 75,
+    baseName: 'Lazise (Base 4)',
+    nightsInBase: 3,
+    mobility: 'Carrozzina',
+    summary: 'Discesa graduale lungo la Val d’Adige verso la sponda veronese del Lago di Garda. Arrivo a Lazise e prima passeggiata al porto vecchio e chiesetta di San Nicolò.',
+    coordinates: [45.5056, 10.7328],
+    schedule: [
+      { time: '10:00', activity: 'Partenza da Levico scendendo sulla SS47 e A22 del Brennero', note: 'Discesa verso il clima temperato del Garda veronese' },
+      { time: '11:45', activity: 'Uscita ad Affi e arrivo a Lazise', note: 'Posizionamento camper al Parcheggio Marra o Camping du Parc, a 5-10 min a piedi dal centro' },
+      { time: '13:00', activity: 'Pranzo in camper e poppata di benvenuto nel veronese', note: 'Clima caldo e soleggiato sul lago' },
+      { time: '16:00', activity: 'Prima passeggiata al porto vecchio di Lazise e chiesetta di San Nicolò', note: 'Porto veneziano con gondole, lastricato liscio e mura possenti' },
+      { time: '18:30', activity: 'Aperitivo lungolago e tramonto dorato sulla sponda bresciana', note: 'Spettacolo imperdibile con le luci della sera' }
+    ],
+    morningProposal: {
+      title: 'Discesa panoramica della Val d’Adige',
+      description: 'Percorso scorrevole e fluido su autostrada a 4 corsie tra i vigneti trentini e le fortezze storiche.',
+      timeEstimate: '1h30 di guida dolce'
+    },
+    afternoonProposal: {
+      title: 'Porto Vecchio di Lazise & Chiesetta di San Nicolò',
+      description: 'L’antico porto lacustre medievale circondato da caffè e viali pavimentati.',
+      timeEstimate: '1h30 a piedi con carrozzina'
+    },
+    rainPlan: {
+      title: 'Dogana Veneta Coperta & Porticati di Lazise',
+      indoorActivity: 'La Dogana Veneta del Trecento affacciata sull’acqua e i portici del corso principale offrono protezione totale.',
+      notes: 'Superfici piatte e comode per la carrozzina.'
+    },
+    walkDetails: {
+      pathName: 'Porto Vecchio & Lungolago Marconi',
+      surface: 'Lastricato in marmo liscio e cubetti di porfido complanari',
+      strollerAccessibility: '100% accessibile senza alcuna barriera',
+      shadeLevel: 'Tamerici e platani sul lungolago'
+    },
+    camperStop: {
+      name: 'Parcheggio Camper Marra (Lazise - via Prà del Principe)',
+      coordinates: [45.5038, 10.7352],
+      has220V: true,
+      services: 'Allaccio 220V, carico/scarico, a 300 metri dalle mura storiche e dal porto',
+      notes: 'Posizione insuperabile per vivere Lazise a piedi senza mai toccare il camper. Prima notte a Lazise.'
+    },
+    babyTips: {
+      feedingSpots: 'Panchine in pietra fronte acqua vicino alla Dogana Veneta',
+      diaperPoints: 'Camper vicinissimo a 5 minuti a piedi dal centro',
+      comfortNotes: 'Lazise a fine settembre gode di un tepore ideale per tenere Eden all’aperto'
+    },
+    medicalNearby: {
+      pharmacy: 'Farmacia San Marco - Via Fontana 14, Lazise (Tel. 045 7580045)',
+      urgentCare: 'Clinica Pederzoli di Peschiera del Garda (a 8 km) / Polo Pediatrico Borgo Trento Verona (25 min)',
+      emergencyPhone: '112'
+    },
+    gastronomy: {
+      dishes: ['Risotto al pesce persico del Garda', 'Luccio in salsa con polenta brustolà', 'Vino Bardolino DOC'],
+      recommendedSpots: 'Trattoria Alla Grotta o Ristorante Il Porticciolo (tavoli all’aperto spaziosi)'
+    },
+    specialSpots: [
+      { type: "Gelateria d'eccellenza", name: "La Cremeria di Lazise", location: "Lazise (centro)", description: "Gelato naturale artigianale preparato con latte fresco intero e dolci da passeggio." },
+      { type: "Agriturismo Km 0", name: "Agriturismo Le Tese", location: "Lazise", description: "Pasta fresca all'uovo tirata a mano, ortaggi di stagione e carni locali a filiera cortissima." },
+      { type: "Fattoria Biodinamica", name: "La Pesenata", location: "Colà di Lazise", description: "Coltivazioni biologiche naturali senza chimica, animali da cortile e degustazioni contadine all'aperto." }
+    ],
+    freeCamperAlternatives: [
+      { name: "Area di Sosta Località Pol", location: "Località Pol 18, Pastrengo", rating: "4.4 / 5", services: "Parcheggio pianeggiante e gratuito su asfalto", whyOmittedNote: "Dista circa 5 km da Lazise e 6 km dal parco termale di Colà. Sebbene comoda e gratuita, si trova nell'entroterra e costringe ad accendere e spostare il camper per raggiungere il lungolago e il centro a piedi con la carrozzina." }
+    ]
+  },
+  {
+    id: 12,
+    dayNumber: 12,
+    date: '26 Set',
     title: 'Mura Scaligere Medievali e Lungolago verso Cisano',
     route: 'Spostamenti a piedi a Lazise',
     distanceKm: 0,
@@ -65,20 +137,12 @@ export const EDEN_PART_3 = [
     gastronomy: {
       dishes: ['Bigoli con le sarde di lago', 'Tortellini di Valeggio sul Mincio', 'Gelato artigianale di Lazise'],
       recommendedSpots: 'Ristorante Pizzeria Cordonego (spazio per passeggino)'
-    },
-    specialSpots: [
-      { type: "Gelateria d'eccellenza", name: "La Cremeria di Lazise", location: "Lazise (centro)", description: "Gelato naturale artigianale preparato con latte fresco intero e dolci da passeggio." },
-      { type: "Agriturismo Km 0", name: "Agriturismo Le Tese", location: "Lazise", description: "Pasta fresca all'uovo tirata a mano, ortaggi di stagione e carni locali a filiera cortissima." },
-      { type: "Fattoria Biodinamica", name: "La Pesenata", location: "Colà di Lazise", description: "Coltivazioni biologiche naturali senza chimica, animali da cortile e degustazioni contadine all'aperto." }
-    ],
-    freeCamperAlternatives: [
-      { name: "Area di Sosta Località Pol", location: "Località Pol 18, Pastrengo", rating: "4.4 / 5", services: "Parcheggio pianeggiante e gratuito su asfalto", whyOmittedNote: "Dista circa 5 km da Lazise e 6 km dal parco termale di Colà. Sebbene comoda e gratuita, si trova nell'entroterra e costringe ad accendere e spostare il camper per raggiungere il lungolago e il centro a piedi con la carrozzina." }
-    ]
+    }
   },
   {
-    id: 12,
-    dayNumber: 12,
-    date: '26 Set',
+    id: 13,
+    dayNumber: 13,
+    date: '27 Set',
     title: 'Giornata Stanziale: Borgo, Giardini e Campagna del Garda',
     route: 'Spostamenti a piedi a Lazise',
     distanceKm: 0,
@@ -87,13 +151,13 @@ export const EDEN_PART_3 = [
     baseName: 'Lazise (Base 4)',
     nightsInBase: 3,
     mobility: 'Carrozzina',
-    summary: 'Giornata dedicata al totale relax: colazione nei vicoli storici, lettura e in alternativa una singola escursione facoltativa in fattoria biologica del basso Garda (La Pesenata).',
+    summary: 'Giornata di relax completo sul Garda veronese: colazione nei vicoli storici, lettura vista lago e visita facoltativa alla fattoria biologica La Pesenata a Colà.',
     coordinates: [45.5056, 10.7328],
     schedule: [
       { time: '09:30', activity: 'Colazione serena con brioche fresche e poppata', note: 'Ritmi lenti senza sveglia' },
-      { time: '10:30', activity: 'Passeggiata rilassata tra le botteghe del borgo vecchio', note: 'Vicoli fioriti e scorci medievali silenziosi al mattino' },
+      { time: '10:30', activity: 'Passeggiata rilassata tra le corti e botteghe del borgo antico', note: 'Vicoli fioriti e scorci medievali silenziosi al mattino' },
       { time: '12:30', activity: 'Pranzo in piazzola o piatto tipico da asporto', note: 'Nanna prolungata di Eden' },
-      { time: '15:30', activity: 'Pomeriggio sul prato o visita facoltativa a una fattoria agricola', note: 'In alternativa visita breve e tranquilla a La Pesenata (basso Garda) per prodotti tipici' },
+      { time: '15:30', activity: 'Pomeriggio sul prato o visita facoltativa a una fattoria biologica', note: 'In alternativa breve visita a La Pesenata (Colà) per prodotti contadini bio' },
       { time: '18:00', activity: 'Verifica camper e carico acque in vista della discesa di domani', note: 'Tutto pronto con calma' }
     ],
     morningProposal: {
@@ -121,13 +185,13 @@ export const EDEN_PART_3 = [
       name: 'Parcheggio Camper Marra (Lazise)',
       coordinates: [45.5038, 10.7352],
       has220V: true,
-      services: 'Allaccio 220V, scarico grigie e nere, carico acqua',
-      notes: 'Terza e ultima notte a Lazise: domani si scende verso la Val di Magra'
+      services: 'Allaccio 220V, scarico grigie e nere, carico acqua pulita',
+      notes: 'Terza e ultima notte a Lazise: domani si scende verso la Toscana'
     },
     babyTips: {
       feedingSpots: 'Giardini ombreggiati del Parco Comunale di Lazise',
       diaperPoints: 'Camper a portata di mano',
-      comfortNotes: 'Giorno perfetto per controllare le scorte di pannolini e prodotti di farmacia per Eden'
+      comfortNotes: 'Giorno perfetto per controllare le scorte di pannolini per Eden prima del viaggio'
     },
     medicalNearby: {
       pharmacy: 'Farmacia San Marco - Via Fontana 14 (Tel. 045 7580045)',
@@ -140,249 +204,123 @@ export const EDEN_PART_3 = [
     }
   },
   {
-    id: 13,
-    dayNumber: 13,
-    date: '27 Set',
-    title: 'Discesa verso la Liguria: Pausa a Fontanellato e Arrivo a Sarzana',
-    route: 'Lazise → Fontanellato → Sarzana',
-    distanceKm: 220,
-    drivingTime: '3h30–4h30 (con sosta poppata)',
-    altitudeMeters: 25,
-    baseName: 'Sarzana e Val di Magra (Base 5)',
-    nightsInBase: 3,
-    mobility: 'Carrozzina',
-    summary: 'Trasferimento verso la Val di Magra con tappa intermedia rilassante a Fontanellato (vicino alla Rocca Sanvitale con fossato). Arrivo a Sarzana per l’ultima base del viaggio.',
-    coordinates: [44.1114, 9.9619],
-    schedule: [
-      { time: '09:30', activity: 'Partenza post-poppata da Lazise imboccando la A22 e A1', note: 'Eden addormentata col dondolio autostradale' },
-      { time: '11:45', activity: 'Sosta rigenerante a Fontanellato (PR)', note: 'Passeggiata con carrozzina intorno alla Rocca Sanvitale con fossato colmo d’acqua e porticati rinascimentali' },
-      { time: '13:30', activity: 'Pranzo in camper o trattoria emiliana, cambio pannolino', note: 'Sosta tranquilla senza fretta' },
-      { time: '14:30', activity: 'Ripartenza lungo la A15 della Cisa verso il mare ligure', note: 'Discesa panoramica verso la Lunigiana' },
-      { time: '16:30', activity: 'Arrivo a Sarzana (Parcheggio Piazza Terzi o Porta Parma)', note: 'Posizionamento camper a due passi dal centro storico' }
-    ],
-    morningProposal: {
-      title: 'Pausa Rinascimentale a Fontanellato',
-      description: 'Passeggiata piana e accogliente attorno al fossato medievale della Rocca Sanvitale.',
-      timeEstimate: '1h15 di passeggiata e poppata'
-    },
-    afternoonProposal: {
-      title: 'Arrivo a Sarzana & Primo Giro del Borgo',
-      description: 'Ingresso da Porta Romana verso Piazza Matteotti tra palazzi nobiliari e botteghe storiche.',
-      timeEstimate: '1h30 a piedi con carrozzina'
-    },
-    rainPlan: {
-      title: 'Portici di Fontanellato e Centro Storico di Sarzana',
-      indoorActivity: 'I lunghi portici di Fontanellato e le gallerie del centro di Sarzana permettono di passeggiare all’asciutto.',
-      notes: 'Superfici piatte e comode.'
-    },
-    walkDetails: {
-      pathName: 'Anello della Rocca Sanvitale & Centro Sarzana',
-      surface: 'Asfalto, lastricato liscio e ciottoli complanari',
-      strollerAccessibility: '100% adatta a carrozzina',
-      shadeLevel: 'Portici monumentali e viali alberati'
-    },
-    camperStop: {
-      name: 'Parcheggio Camper Piazza Terzi (Sarzana)',
-      coordinates: [44.1132, 9.9638],
-      has220V: true,
-      services: 'Allaccio 220V, colonnine ricarica, a 200m dal centro pedonale',
-      notes: 'Soluzione urbana comodissima per vivere il centro di Sarzana a piedi. Alternativa: Camping River ad Ameglia.'
-    },
-    babyTips: {
-      feedingSpots: 'Panchine ombreggiate sotto i tigli attorno alla Rocca a Fontanellato',
-      diaperPoints: 'Tavolo camper sempre igienizzato',
-      comfortNotes: 'Clima ligure mite e iodato di fine settembre: temperatura ideale'
-    },
-    medicalNearby: {
-      pharmacy: 'Farmacia San Giorgio - Via Landinelli 60, Sarzana (Tel. 0187 620244)',
-      urgentCare: 'Ospedale San Bartolomeo di Sarzana (a 2 km) / Ospedale Sant’Andrea La Spezia (12 km)',
-      emergencyPhone: '112'
-    },
-    gastronomy: {
-      dishes: ['Torta d’erbi lunigianese', 'Spongata di Sarzana', 'Testaroli al pesto ligure'],
-      recommendedSpots: 'Trattoria dei Fabbri o Focacceria da Francesco (focaccia calda da asporto)'
-    }
-  },
-  {
     id: 14,
     dayNumber: 14,
     date: '28 Set',
-    title: 'Il Centro Nobiliare di Sarzana e la Fortezza Firmafede',
-    route: 'Spostamenti a piedi a Sarzana',
-    distanceKm: 0,
-    drivingTime: '0 min (Camper fermo)',
-    altitudeMeters: 25,
-    baseName: 'Sarzana e Val di Magra (Base 5)',
-    nightsInBase: 3,
+    title: 'Discesa verso la Toscana: Valico della Cisa e Tappa a Lucca',
+    route: 'Lazise → A22/A1 → Cisa A15 → Lucca',
+    distanceKm: 240,
+    drivingTime: '2h45–3h15 (con sosta poppata a Pontremoli)',
+    altitudeMeters: 20,
+    baseName: 'Lucca (Tappa Strategica Notte 14)',
+    nightsInBase: 1,
     mobility: 'Carrozzina',
-    summary: 'Passeggiata nel raffinato borgo medievale di Sarzana: Via Mazzini pedonale, la Pieve di Sant’Andrea, la Cattedrale e il fossato verde della Fortezza Firmafede.',
-    coordinates: [44.1114, 9.9619],
+    summary: 'Discesa pomeridiana superando il valico della Cisa senza fretta durante il sonnellino di Eden. Arrivo a Lucca per l’ultima serata: passeggiata magnifica in carrozzina sopra le leggendarie Mura alberate.',
+    coordinates: [43.8430, 10.5080],
     schedule: [
-      { time: '09:30', activity: 'Colazione serena con focaccia ligure appena sfornata', note: 'Poppata comoda in camper' },
-      { time: '10:30', activity: 'Camminata su Via Mazzini fino a Piazza Matteotti', note: 'Zona interamente a traffico limitato, pavimentata e liscia per carrozzina' },
-      { time: '12:00', activity: 'Visita alla Cattedrale di Santa Maria Assunta', note: 'Navate ampie e fresche con rampa di accesso laterale' },
-      { time: '13:00', activity: 'Pranzo in trattoria con veranda esterna o rientro al camper', note: 'Tutto a pochi metri' },
-      { time: '16:00', activity: 'Passeggiata attorno ai bastioni della Fortezza Firmafede', note: 'Prato verde curato nel fossato e viali esterni pianeggianti' }
+      { time: '10:00', activity: 'Partenza post-poppata da Lazise imboccando la A22 del Brennero', note: 'Eden si assopisce col dondolio regolare della marcia' },
+      { time: '12:00', activity: 'Pausa pranzo e poppata nella Lunigiana appenninica (Pontremoli)', note: 'Aria fresca dell’Appennino toscano e sosta pannolino in camper' },
+      { time: '13:30', activity: 'Prosecuzione serena lungo la A15 e raccordo A11 verso Lucca', note: 'Appennino già superato: zero pensieri di traffico o code per domani!' },
+      { time: '15:00', activity: 'Arrivo all’Area Camper Il Serchio a Lucca', note: 'Piazzola alberata, tranquilla, allaccio 220V e a 10 min a piedi da Porta Sant’Anna' },
+      { time: '16:30', activity: 'Passeggiata sopra le Mura Rinascimentali di Lucca in carrozzina', note: 'Anello monumentale di 4 km largo 30 metri, tutto asfaltato, alberato e chiuso alle auto' },
+      { time: '18:30', activity: 'Ultimo gelato e aperitivo in Piazza dell’Anfiteatro', note: 'Atmosfera toscana rilassata per celebrare l’ultima sera del viaggio' }
     ],
     morningProposal: {
-      title: 'Via Mazzini, Sant’Andrea & Piazza Matteotti',
-      description: 'Il salotto elegante di Sarzana: facciate dipinte, caffè all’aperto e antiquariato.',
-      timeEstimate: '2h di passeggiata lenta'
+      title: 'Valico della Cisa & Pranzo in Lunigiana',
+      description: 'Guida comoda lungo la A15 con sosta ristoratrice a Pontremoli prima di raggiungere la piana lucchese.',
+      timeEstimate: '2h di viaggio + sosta'
     },
     afternoonProposal: {
-      title: 'Cattedrale & Anello della Fortezza Firmafede',
-      description: 'La maestosa fortezza medicea con il suo fossato alberato e panchine all’ombra.',
-      timeEstimate: '1h30'
+      title: 'La Passeggiata Sulle Mura Alberate di Lucca',
+      description: 'Uno dei percorsi pedonali più celebri al mondo per carrozzine: viali monumentali, platani e baluardi storici.',
+      timeEstimate: '2h con carrozzina'
     },
     rainPlan: {
-      title: 'Galleria d’Arte e Sale della Fortezza Firmafede',
-      indoorActivity: 'Le sale espositive a piano terra della fortezza e i porticati di Piazza Luni offrono un perfetto percorso coperto con carrozzina.',
-      notes: 'Ascensori e rampe presenti.'
+      title: 'Portici di Piazza San Michele e Caffè di Lucca',
+      indoorActivity: 'I magnifici porticati medievali e i caffè storici del centro di Lucca offrono riparo impeccabile con rampe.',
+      notes: 'Pavimentazione del centro storico piana e liscia.'
     },
     walkDetails: {
-      pathName: 'Anello Monumentale di Sarzana',
-      surface: 'Lastre di arenaria liscia e asfalto',
-      strollerAccessibility: '100% adatto alla carrozzina',
-      shadeLevel: 'Ombreggiatura degli edifici e dei platani dei fossati'
+      pathName: 'Anello delle Mura Urbane di Lucca',
+      surface: 'Asfalto liscio complanare e terra battuta fine',
+      strollerAccessibility: '100% adatta a carrozzina (nessun gradino sulle rampe dei baluardi)',
+      shadeLevel: 'Massima (fitte alberature monumentali continue)'
     },
     camperStop: {
-      name: 'Parcheggio Camper Piazza Terzi (Sarzana)',
-      coordinates: [44.1132, 9.9638],
+      name: 'Area Camper Il Serchio (Lucca - Via del Tiro a Segno)',
+      coordinates: [43.8475, 10.4885],
       has220V: true,
-      services: 'Allaccio 220V continuo',
-      notes: 'Seconda notte nella stessa piazzola'
+      services: 'Allaccio 220V, camper service, docce calde, recintata e custodita, a 1 km dalle Mura',
+      notes: 'Sosta strategica perfetta per l’ultima notte: a soli 25 minuti da Pisa per un rientro domattina senza alcun rischio.'
     },
     babyTips: {
-      feedingSpots: 'Giardini pubblici di Piazza Garibaldi all’ombra delle magnolie',
-      diaperPoints: 'Camper a 5 minuti a piedi',
-      comfortNotes: 'Temperatura ligure gradevole, ventilazione leggera'
+      feedingSpots: 'Panchine ombreggiate sul Baluardo San Paolino delle Mura di Lucca',
+      diaperPoints: 'Tavolo camper sempre pronto e riscaldato',
+      comfortNotes: 'Essere già a Lucca azzera completamente ogni ansia da traffico per il rientro di domani mattina alle 11:00'
     },
     medicalNearby: {
-      pharmacy: 'Farmacia Centrale Sarzana - Piazza Matteotti (Tel. 0187 620130)',
-      urgentCare: 'Ospedale San Bartolomeo Sarzana (2 km)',
+      pharmacy: 'Farmacia Comunale 24h Lucca - Piazza del Carmine (Tel. 0583 496660)',
+      urgentCare: 'Pronto Soccorso Ospedale San Luca di Lucca (a 4 km)',
       emergencyPhone: '112'
     },
     gastronomy: {
-      dishes: ['Farinata di ceci cotta a legna', 'Pesto alla genovese fresco', 'Vino Vermentino dei Colli di Luni DOC'],
-      recommendedSpots: 'Pizzeria Focacceria La Scaletta o Il Calandrino (centro storico)'
+      dishes: ['Torta coi becchi al cioccolato lucchese', 'Buccellato fresco con uvetta e anice', 'Zuppa di farro alla lucchese'],
+      recommendedSpots: 'Pasticceria Taddeucci (Piazza San Michele) per il celebre Buccellato artigianale'
     }
   },
   {
     id: 15,
     dayNumber: 15,
-    date: '29 Set',
-    title: 'Bocca di Magra Facoltativa e Preparativi di Rientro',
-    route: 'Sarzana ↔ Bocca di Magra (facoltativo, 12 km)',
-    distanceKm: 24,
-    drivingTime: '20 min a tratta',
+    date: '29 Set (Mattina)',
+    title: 'Rientro Trionfale a Pisa (Arrivo Ore 11:00 Precise)',
+    route: 'Lucca → SS12 / A12 → Pisa',
+    distanceKm: 22,
+    drivingTime: '25 min (partenza ore 10:15 post-poppata)',
     altitudeMeters: 10,
-    baseName: 'Sarzana e Val di Magra (Base 5)',
-    nightsInBase: 3,
-    mobility: 'Carrozzina',
-    summary: 'Uscita facoltativa verso il borgo marinaro di Bocca di Magra: passeggiata panoramica alla foce del fiume con vista sul mare e sulle Alpi Apuane.',
-    coordinates: [44.0512, 9.9725],
-    schedule: [
-      { time: '10:00', activity: 'Breve escursione verso Bocca di Magra (o mattinata di relax a Sarzana)', note: 'Parcheggio pianeggiante lungo il fiume Magra' },
-      { time: '10:45', activity: 'Passeggiata sulla banchina pedonale di Bocca di Magra', note: 'Sentiero liscio vista barche e foce del fiume che si getta nel Tirreno' },
-      { time: '12:30', activity: 'Pranzo vista mare o rientro alla base camper di Sarzana', note: 'Fresco salmastro e sole dolce di fine settembre' },
-      { time: '15:30', activity: 'Ultima passeggiata rilassata per souvenir tipici e tozzetti a Sarzana', note: 'Acquisto pesto fresco artigianale per casa' },
-      { time: '18:00', activity: 'Preparazione camper per il rientro di domani (chiusura gavoni, scarichi)', note: 'Borsa di Eden pronta per la tratta finale' }
-    ],
-    morningProposal: {
-      title: 'Banchina sul Fiume e Mare a Bocca di Magra',
-      description: 'L’incontro tra il fiume Magra e il mare, con sfondo delle bianche cave di marmo delle Apuane.',
-      timeEstimate: '1h30 con carrozzina'
-    },
-    afternoonProposal: {
-      title: 'Ultimo Gelato a Sarzana & Preparativi Camper',
-      description: 'Pomeriggio senza stress per riordinare il camper e godersi l’ultimo tramonto del viaggio.',
-      timeEstimate: 'Libero'
-    },
-    rainPlan: {
-      title: 'Bistrot del Porto di Bocca di Magra o Caffè a Sarzana',
-      indoorActivity: 'Terrazze coperte e riscaldate affacciate sul fiume e sul mare.',
-      notes: 'Rientro rapido a Sarzana in camper in caso di pioggia.'
-    },
-    walkDetails: {
-      pathName: 'Banchina di Bocca di Magra & Fossato Sarzana',
-      surface: 'Pavimentazione liscia e asfalto lungofiume',
-      strollerAccessibility: '100% pianeggiante e agevole',
-      shadeLevel: 'Pini marittimi e tamerici'
-    },
-    camperStop: {
-      name: 'Parcheggio Camper Piazza Terzi (Sarzana)',
-      coordinates: [44.1132, 9.9638],
-      has220V: true,
-      services: 'Allaccio 220V, camper service per svuotamento serbatoi prima del viaggio finale',
-      notes: 'Terza e ultima notte a Sarzana: domani rientro a Pisa'
-    },
-    babyTips: {
-      feedingSpots: 'Panchine del lungofiume a Bocca di Magra di fronte all’imbarcadero',
-      diaperPoints: 'Camper sempre pronto e comodo',
-      comfortNotes: 'Eden ha completato 15 giorni magnifici: sonno regolare e acclimatamento perfetto'
-    },
-    medicalNearby: {
-      pharmacy: 'Farmacia Bocca di Magra / Farmacia Centrale Sarzana (Tel. 0187 620130)',
-      urgentCare: 'Ospedale San Bartolomeo Sarzana (2 km)',
-      emergencyPhone: '112'
-    },
-    gastronomy: {
-      dishes: ['Muscoli ripieni alla ligure (cozze)', 'Frittura di paranza del golfo', 'Panigacci di Podenzana'],
-      recommendedSpots: 'Ristorante Ciccio Marina o Osteria dei Pescatori a Bocca di Magra'
-    }
-  },
-  {
-    id: 16,
-    dayNumber: 16,
-    date: '30 Set',
-    title: 'Rientro Sereno alla Base di Pisa',
-    route: 'Sarzana → Pisa',
-    distanceKm: 65,
-    drivingTime: '1h–1h30',
-    altitudeMeters: 10,
-    baseName: 'Rientro a Pisa',
+    baseName: 'Pisa (Rientro a Casa ore 11:00)',
     nightsInBase: 0,
     mobility: 'Ovetto',
-    summary: 'Tratta conclusiva di rientro verso Pisa sulla comoda A12 / Aurelia. Chiusura del viaggio in bellezza dopo 16 giorni indimenticabili tra laghi, parchi alpini e mare.',
+    summary: 'Tratta finale brevissima di appena 22 km. Sveglia serena a Lucca, colazione con buccellato, ultima poppata e partenza alle 10:15 per tagliare il traguardo a Pisa alle ore 11:00 in punto.',
     coordinates: [43.7228, 10.4017],
     schedule: [
-      { time: '09:30', activity: 'Ultima colazione in camper e poppata di Eden', note: 'Calma e serenità prima di staccare la 220V' },
-      { time: '10:30', activity: 'Sistemazione di Eden nell’ovetto e partenza verso Pisa sulla A12', note: 'Tragitto breve di circa un’ora' },
-      { time: '11:45', activity: 'Arrivo a Pisa e rientro al rimessaggio / casa', note: 'Scarico bagagli, prime coccole a casa e riposino di Eden nel suo lettino' },
-      { time: '13:00', activity: 'Pranzo di festeggiamento in famiglia', note: 'Viaggio concluso con successo, ricchezza di ricordi e tanta esperienza camper acquisita!' }
+      { time: '08:30', activity: 'Risveglio dolce all’Area Camper di Lucca e colazione rilassata', note: 'Buccellato artigianale fresco e caffè in dinette' },
+      { time: '09:30', activity: 'Ultima poppata comoda di Eden e cambio pannolino', note: 'Nessuna fretta: la tratta da fare dura meno di mezz’ora!' },
+      { time: '10:15', activity: 'Chiusura torretta 220V, sistemazione di Eden nell’ovetto e partenza', note: 'Percorso veloce e lineare su SS12 del Brennero verso Pisa' },
+      { time: '10:45–11:00', activity: 'Arrivo a Pisa al rimessaggio / casa alle 11:00 precise', note: 'Missione compiuta! Scarico bagagli sereno e coccole a casa con la bimba' },
+      { time: '12:30', activity: 'Pranzo di bentornati a Pisa in famiglia', note: '15 giorni perfetti, 14 notti rigeneranti e ricordi indimenticabili per tutta la vita' }
     ],
     morningProposal: {
-      title: 'Ultima Poppata & Tratta Autostradale',
-      description: 'Guida breve e lineare lungo la costa toscana passando per Carrara e Viareggio.',
-      timeEstimate: '1h15 di viaggio'
+      title: 'Colazione & Tratta Finale Dolce',
+      description: 'Solo 22 km di asfalto piano tra Lucca e Pisa passando per i Monti Pisani.',
+      timeEstimate: '25 min di guida serena'
     },
     afternoonProposal: {
-      title: 'Rientro a Casa & Riconsegna Camper',
-      description: 'Sistemazione finale a Pisa e primi racconti di viaggio a nonni e amici.',
-      timeEstimate: 'Pomeriggio sereno'
+      title: 'Bentornati a Casa Eden!',
+      description: 'Sistemazione del camper, lavatrici e riposino di Eden nella sua culla domestica.',
+      timeEstimate: 'Pomeriggio di festa a casa'
     },
     rainPlan: {
-      title: 'Rientro Diretto a Casa',
-      indoorActivity: 'Viaggio coperto in cabina camper e arrivo al calduccio di casa.',
-      notes: 'Massimo comfort per tutta la famiglia.'
+      title: 'Rientro Protetto in Camper',
+      indoorActivity: 'Viaggio brevissimo interamente coperto fino al parcheggio di casa.',
+      notes: 'Massima comodità e zero fatica.'
     },
     walkDetails: {
-      pathName: 'Rientro alla base di Pisa',
-      surface: 'Asfalto autostradale e marciapiedi domestici',
-      strollerAccessibility: 'Completamente su asfalto durante le operazioni di carico/scarico',
-      shadeLevel: 'Aree coperte'
+      pathName: 'Rientro a casa a Pisa',
+      surface: 'Asfalto e marciapiedi di casa',
+      strollerAccessibility: '100% accessibile',
+      shadeLevel: 'Ombreggiatura'
     },
     camperStop: {
       name: 'Rimessaggio Camper / Casa a Pisa',
       coordinates: [43.7228, 10.4017],
       has220V: true,
-      services: 'Allaccio 220V domestico, pulizia camper finale',
-      notes: 'Bentornati a casa Eden, mamma e papà!'
+      services: 'Allaccio 220V di casa, pulizia finale',
+      notes: 'Bentornati a casa Eden, mamma e papà! Il primo grande viaggio in camper è stato un successo.'
     },
     babyTips: {
-      feedingSpots: 'Casa dolce casa a Pisa',
+      feedingSpots: 'Poltrona di casa a Pisa',
       diaperPoints: 'Fasciatoio di casa',
-      comfortNotes: 'Complimenti per la prima grande avventura in camper di Eden!'
+      comfortNotes: 'Eden è cresciuta, acclimatata e serena: l’aria fresca dei laghi e dei parchi le ha fatto benissimo!'
     },
     medicalNearby: {
       pharmacy: 'Tutte le farmacie di Pisa',
@@ -391,7 +329,7 @@ export const EDEN_PART_3 = [
     },
     gastronomy: {
       dishes: ['Pappa al pomodoro', 'Torta coi bischeri pisana'],
-      recommendedSpots: 'Cena rilassata a casa per celebrare la fine del road trip'
+      recommendedSpots: 'Pranzo e cena a casa celebrando il road trip'
     }
   }
 ];

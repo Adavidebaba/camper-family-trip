@@ -1,42 +1,106 @@
 /**
  * Dati Tappe 1 - 5 per l'itinerario con Eden (15 - 19 Settembre 2026)
- * Basi: Riva del Garda (Base 1, notti 1-3) e inizio Comano (Base 2, notti 1-2)
+ * Basi: Sarzana (Sosta Tattica Notte 1), Riva del Garda (Base 1, notti 1-3) e inizio Comano (Base 2, notte 1/3)
  */
 export const EDEN_PART_1 = [
   {
     id: 1,
     dayNumber: 1,
-    date: '15 Set',
-    title: 'Partenza da Pisa verso l’Alto Garda',
-    route: 'Pisa → Riva del Garda',
-    distanceKm: 320,
-    drivingTime: '4h30–5h30 (con 2 pause poppata)',
+    date: '15 Set (Sera)',
+    title: 'Partenza Serale Tattica: Pisa → Sarzana',
+    route: 'Pisa → Sarzana (Val di Magra)',
+    distanceKm: 65,
+    drivingTime: '50 min (partenza dopo le 20:00)',
+    altitudeMeters: 25,
+    baseName: 'Sarzana (Sosta Tattica Notte 1)',
+    nightsInBase: 1,
+    mobility: 'Ovetto',
+    summary: 'Partenza serale post-poppata dopo le 20:00. Guida breve e lineare di circa 50 minuti per oltrepassare il confine ligure-toscano e dormire già pronti all’imbocco della Cisa.',
+    coordinates: [44.1132, 9.9638],
+    schedule: [
+      { time: '20:00', activity: 'Ultima poppata comoda e cambio pannolino a casa a Pisa', note: 'Camper già stivato, culla di Eden pronta con lenzuolina e sacco nanna' },
+      { time: '20:30', activity: 'Partenza tranquilla da Pisa sulla A12 verso nord', note: 'Eden ben allacciata nell’ovetto omologato, dondolio rilassante dell’autostrada' },
+      { time: '21:20', activity: 'Arrivo all’Area Sosta Camper di Sarzana (Piazza Terzi)', note: 'Accesso comodo e immediato a soli 5 minuti dall’uscita autostradale di Sarzana' },
+      { time: '21:35', activity: 'Allaccio 220V rapido, stabilizzatori e nanna serena', note: 'Nessun rumore, temperatura fresca notturna, prima notte perfetta in camper' }
+    ],
+    morningProposal: {
+      title: 'Pomeriggio di Preparazione a Casa',
+      description: 'Stivaggio calmo del camper a Pisa durante il giorno, senza fretta né ansia da partenza.',
+      timeEstimate: 'Pomeriggio libero a casa'
+    },
+    afternoonProposal: {
+      title: 'Partenza Post-Cena & Arrivo Serale',
+      description: 'Tragitto breve di soli 65 km in orario di sonno profondo per Eden.',
+      timeEstimate: '50 min di guida'
+    },
+    rainPlan: {
+      title: 'Allaccio e Notte al Calduccio',
+      indoorActivity: 'Allaccio rapido alla torretta 220V e stufa/clima impostato sulla temperatura ideale per il sonno della neonata (20–21 °C).',
+      notes: 'Piazzola pavimentata e pianeggiante, scarpe asciutte.'
+    },
+    walkDetails: {
+      pathName: 'Piazzola Area Sosta Piazza Terzi',
+      surface: 'Asfalto liscio e autobloccanti complanari',
+      strollerAccessibility: '100% accessibile',
+      shadeLevel: 'Area illuminata e protetta'
+    },
+    camperStop: {
+      name: 'Area Camper Piazza Terzi (Sarzana)',
+      coordinates: [44.1132, 9.9638],
+      has220V: true,
+      services: 'Allaccio 220V, carico/scarico, sbarra automatica d’accesso, illuminata',
+      notes: 'Perfetta per la sosta della prima notte: silenziosa, vicina al casello e a 200m dal borgo antico.'
+    },
+    babyTips: {
+      feedingSpots: 'Zona dinette riscaldata del camper prima di dormire',
+      diaperPoints: 'Tavolo camper allestito con fasciatoio portatile',
+      comfortNotes: 'Partire con la bimba già vestita per la notte: arrivati a Sarzana basta trasferirla dall’ovetto al lettino senza svegliarla'
+    },
+    medicalNearby: {
+      pharmacy: 'Farmacia San Giorgio - Via Landinelli 60, Sarzana (Tel. 0187 620244)',
+      urgentCare: 'Pronto Soccorso Ospedale San Bartolomeo di Sarzana (a 2 km)',
+      emergencyPhone: '112'
+    },
+    gastronomy: {
+      dishes: ['Spuntino serale leggero portato da casa o focaccia ligure per colazione'],
+      recommendedSpots: 'Botteghe storiche di Sarzana per la mattina successiva'
+    }
+  },
+  {
+    id: 2,
+    dayNumber: 2,
+    date: '16 Set',
+    title: 'Verso il Trentino: Cisa e Arrivo a Riva del Garda',
+    route: 'Sarzana → Passo della Cisa → Riva del Garda',
+    distanceKm: 260,
+    drivingTime: '3h30–4h00 (con sosta poppata)',
     altitudeMeters: 70,
     baseName: 'Riva del Garda (Base 1)',
     nightsInBase: 3,
     mobility: 'Carrozzina',
-    summary: 'Trasferimento principale verso il Trentino con pause strategiche a Pontremoli e in Emilia. Arrivo al Lago di Garda e allaccio camper.',
+    summary: 'Partenza mattutina da Sarzana imboccando direttamente la A15 della Cisa (già a 50 min di vantaggio da Pisa!). Sosta poppata rilassata in Emilia e arrivo pomeridiano sul Garda Trentino.',
     coordinates: [45.8858, 10.8524],
     schedule: [
-      { time: '09:00', activity: 'Partenza post-poppata da Pisa sulla A12 / A15 della Cisa', note: 'Eden ben allacciata nell’ovetto omologato, mai in movimento fuori dal seggiolino' },
-      { time: '10:45', activity: 'Prima sosta a Pontremoli', note: 'Cambio pannolino, poppata e sosta tranquilla fuori dal traffico' },
-      { time: '13:00', activity: 'Seconda pausa in Emilia (zona Reggio Emilia / Mantova)', note: 'Pranzo leggero in camper e nanna della bimba' },
-      { time: '15:30', activity: 'Arrivo a Riva del Garda (Zona Brione)', note: 'Posizionamento in piazzola, allaccio 220V e discesa gambe' },
-      { time: '17:30', activity: 'Primo affaccio facoltativo al lago a piedi con carrozzina', note: 'Brezza lacustre e passeggiata rilassata verso Porto San Nicolò' }
+      { time: '09:00', activity: 'Risveglio disteso, colazione e prima poppata a Sarzana', note: 'Calma assoluta, niente traffico mattutino da Pisa' },
+      { time: '10:00', activity: 'Partenza imboccando la A15 della Cisa verso Parma e la A22', note: 'Valico appenninico dolce e discesa nella pianura padana' },
+      { time: '11:45', activity: 'Sosta rigenerante in area di servizio attrezzata o a Mantova Sud', note: 'Poppata, cambio pannolino e passeggiata con carrozzina all’aria aperta' },
+      { time: '14:00', activity: 'Risalita della Valle dell’Adige verso Rovereto Sud e Lago di Garda', note: 'Discesa panoramica verso Torbole e Riva' },
+      { time: '15:15', activity: 'Arrivo a Riva del Garda (Area Camper Brione)', note: 'Posizionamento in piazzola, allaccio 220V e distensione gambe' },
+      { time: '17:30', activity: 'Primo affaccio al lago a piedi con carrozzina verso Porto San Nicolò', note: 'Brezza lacustre delicata e viali pianeggianti tra oleandri e cipressi' }
     ],
     morningProposal: {
-      title: 'Viaggio & Prima Sosta a Pontremoli',
-      description: 'Guida regolare lungo la Cisa con sosta defilata prima della pianura padana per la poppata di Eden.',
-      timeEstimate: 'Circa 2h di marcia'
+      title: 'Valico della Cisa & Pianura Emiliana',
+      description: 'Guida regolare lungo la Cisa con sosta strategica prima del raccordo con la A22.',
+      timeEstimate: 'Circa 2h15 di marcia'
     },
     afternoonProposal: {
-      title: 'Arrivo a Riva & Affaccio al Lago',
-      description: 'Sistemazione camper nell’area sosta Brione e breve passeggiata pianeggiante verso il lago.',
+      title: 'Arrivo al Lago & Primo Giro a San Nicolò',
+      description: 'Sistemazione camper nell’area sosta Brione e passeggiata pianeggiante verso il porticciolo.',
       timeEstimate: 'Circa 1h a piedi'
     },
     rainPlan: {
-      title: 'Pomeriggio Cocoon in Camper',
-      indoorActivity: 'Allaccio 220V immediato, riscaldamento delicato della cellula e nanna serena dopo la lunga tratta in autostrada.',
+      title: 'Pomeriggio Caldo in Camper',
+      indoorActivity: 'Allaccio 220V immediato, riscaldamento delicato della cellula e nanna serena dopo la tratta autostradale.',
       notes: 'Nessun bisogno di forzare uscite sotto la pioggia il primo giorno.'
     },
     walkDetails: {
@@ -50,7 +114,7 @@ export const EDEN_PART_1 = [
       coordinates: [45.8885, 10.8572],
       has220V: true,
       services: 'Allaccio 220V, camper service, piazzole piane asfaltate, a 10 min a piedi dal lago',
-      notes: 'Tranquilla e strategica per il settore est del lago. Alternativa: Camping Brione.'
+      notes: 'Tranquilla e strategica per il settore est del lago. Prima delle 3 notti nella base di Riva.'
     },
     babyTips: {
       feedingSpots: 'Panchine del porto San Nicolò all’ombra del Forte Brione',
@@ -64,7 +128,7 @@ export const EDEN_PART_1 = [
     },
     gastronomy: {
       dishes: ['Carne salada del Garda trentino', 'Olio extravergine DOP di Riva', 'Strudel di mele'],
-      recommendedSpots: 'Ristorante La Colombera o asporto da consumare in camper'
+      recommendedSpots: 'Ristorante La Colombera o asporto tipico trentino'
     },
     specialSpots: [
       { type: "Pasticceria d'eccellenza", name: "Garda Foodie", location: "Riva del Garda", description: "Lievitati soffici, sfoglie fragranti e monoporzioni artigianali con vista lago." },
@@ -75,9 +139,9 @@ export const EDEN_PART_1 = [
     ]
   },
   {
-    id: 2,
-    dayNumber: 2,
-    date: '16 Set',
+    id: 3,
+    dayNumber: 3,
+    date: '17 Set',
     title: 'San Nicolò, Spiaggia dei Pini e Lungolago',
     route: 'Spostamenti a piedi a Riva del Garda',
     distanceKm: 0,
@@ -86,7 +150,7 @@ export const EDEN_PART_1 = [
     baseName: 'Riva del Garda (Base 1)',
     nightsInBase: 3,
     mobility: 'Carrozzina',
-    summary: 'Giornata interamente senza guida: passeggiata liscia con carrozzina da San Nicolò verso la Spiaggia dei Pini e i Sabbioni tra giardini e cigni.',
+    summary: 'Giornata interamente senza guida: passeggiata liscia con carrozzina da San Nicolò verso la Spiaggia dei Pini e i Sabbioni tra giardini fioriti, cigni e brezza lacustre.',
     coordinates: [45.8858, 10.8524],
     schedule: [
       { time: '09:30', activity: 'Risveglio disteso e colazione in piazzola', note: 'Poppata calma con aria fresca del mattino' },
@@ -98,51 +162,51 @@ export const EDEN_PART_1 = [
     morningProposal: {
       title: 'Passeggiata San Nicolò e Spiaggia dei Pini',
       description: 'Lungo il nastro d’asfalto liscio a pelo d’acqua, tra le barche a vela e le anatre.',
-      timeEstimate: '1h30 compreso riposo su panchina'
+      timeEstimate: '2h a passo d’uomo'
     },
     afternoonProposal: {
-      title: 'Parco dei Sabbioni & Verde Miralago',
-      description: 'Passeggiata all’ombra dei grandi pioppi con vista panoramica sul golfo di Riva.',
-      timeEstimate: '1h30 con carrozzina'
+      title: 'Parco Miralago & Spiaggia Sabbioni',
+      description: 'Prati curati all’inglese, siepi fiorite e panchine comode per l’allattamento.',
+      timeEstimate: '1h30 di relax'
     },
     rainPlan: {
-      title: 'Passeggiata nei portici e Galleria Coperta di Riva',
-      indoorActivity: 'Percorso al riparo sotto i portici del lungolago o visita al centro commerciale Blue Garden con carrozzina per passeggiare all’asciutto.',
-      notes: 'Superfici completamente prive di gradini e riscaldate.'
+      title: 'MAG Museo Alto Garda & Caffè Storici',
+      indoorActivity: 'La Rocca di Riva ospita il MAG con cortile interno coperto e sale espositive accessibili al pian terreno.',
+      notes: 'I portici di Piazza III Novembre offrono ripari continui.'
     },
     walkDetails: {
-      pathName: 'Lungolago dei Pini & Sabbioni',
-      surface: 'Pavimentazione liscia e asfalto per carrozzine',
-      strollerAccessibility: '100% pianeggiante e accessibile',
-      shadeLevel: 'Molto alta (parchi alberati a riva)'
+      pathName: 'Ciclopedonale Riva - Torbole (Tratto Ovest)',
+      surface: 'Asfalto liscio e viali in ghiaino fine compatto',
+      strollerAccessibility: '100% adatta a carrozzine e passeggini',
+      shadeLevel: 'Pini marittimi, salici piangenti e ulivi secolari'
     },
     camperStop: {
-      name: 'Area Sosta Camper Brione (Riva)',
+      name: 'Area Camper Brione (Riva del Garda)',
       coordinates: [45.8885, 10.8572],
       has220V: true,
-      services: 'Allaccio 220V attivo continuo',
-      notes: 'Seconda notte nella stessa postazione: zero stress da trasloco'
+      services: 'Allaccio 220V continuo',
+      notes: 'Seconda notte nella stessa piazzola: zero stress da spostamento'
     },
     babyTips: {
-      feedingSpots: 'Panchine vista lago riparate sotto i tigli del Parco Sabbioni',
-      diaperPoints: 'Camper facilmente raggiungibile a piedi in qualsiasi momento',
-      comfortNotes: 'La carrozzina scorre senza vibrazioni favorendo la nanna di Eden'
+      feedingSpots: 'Panchine di Parco Miralago di fronte alla Spiaggia Sabbioni',
+      diaperPoints: 'Camper raggiungibile a piedi in 10-15 minuti',
+      comfortNotes: 'La brezza lacustre pomeridiana (Ora del Garda) richiede un cappellino di cotone leggero per la bimba'
     },
     medicalNearby: {
-      pharmacy: 'Farmacia San Nicolò - Viale Rovereto 103 (Tel. 0464 552194)',
-      urgentCare: 'Ospedale di Arco (5 km, pronto soccorso pediatrico)',
+      pharmacy: 'Farmacia San Nicolò - Riva del Garda (Tel. 0464 552194)',
+      urgentCare: 'Pronto Soccorso Ospedale di Arco (5 km)',
       emergencyPhone: '112'
     },
     gastronomy: {
-      dishes: ['Filetti di trota del Sarca', 'Polenta di Storo con formaggio casolet'],
-      recommendedSpots: 'Ristorante Bar Spiaggia dei Pini (tavoli larghi all’aperto ideali con carrozzina)'
+      dishes: ['Pesce persico e coregone di lago', 'Polenta di Storo con formaggio di malga'],
+      recommendedSpots: 'Ristorante Pizzeria Bavaria o Ristorante L’Ora'
     }
   },
   {
-    id: 3,
-    dayNumber: 3,
-    date: '17 Set',
-    title: 'Centro Storico di Riva e la Rocca sul Lago',
+    id: 4,
+    dayNumber: 4,
+    date: '18 Set',
+    title: 'Il Centro Storico di Riva, la Rocca e Tradizione Bio',
     route: 'Spostamenti a piedi a Riva del Garda',
     distanceKm: 0,
     drivingTime: '0 min (Camper fermo)',
@@ -150,195 +214,127 @@ export const EDEN_PART_1 = [
     baseName: 'Riva del Garda (Base 1)',
     nightsInBase: 3,
     mobility: 'Carrozzina',
-    summary: 'Esplorazione del borgo veneziano di Riva: Piazza III Novembre con la Torre Apponale e i giardini della Rocca del MAG.',
+    summary: 'Passeggiata verso il nucleo medievale di Riva: Piazza III Novembre, la Torre Apponale, il fossato della Rocca e visita rilassata dei giardini storici.',
     coordinates: [45.8858, 10.8524],
     schedule: [
-      { time: '10:00', activity: 'Camminata verso il centro storico di Riva', note: 'Tragitto di circa 30 minuti a passo comodo lungo il lago' },
-      { time: '10:45', activity: 'Piazza III Novembre e porto antico di Riva', note: 'I palazzi storici col porticato e la vista sulla darsena' },
-      { time: '12:00', activity: 'Parco della Rocca e fossato con ninfee', note: 'Zona fresca e riparata adatta per la poppata' },
-      { time: '13:00', activity: 'Pranzo in trattoria con veranda esterna o rientro al camper', note: 'Menù leggero con prodotti trentini' },
-      { time: '16:00', activity: 'Pomeriggio rilassato al parco o breve sosta all’oleificio per scorta olio', note: 'In alternativa visita rilassata a Maso Bòtes o Madonna delle Vittorie' }
+      { time: '09:30', activity: 'Colazione calma e poppata di Eden al camper', note: 'Ritmo disteso senza sveglia' },
+      { time: '10:30', activity: 'Camminata verso il centro storico pedonale di Riva', note: 'Marciapiedi complanari, passaggio attorno al porto vecchio' },
+      { time: '12:30', activity: 'Pranzo sul lungolago o rientro al camper per il pisolino', note: 'Eden riposa nella massima quiete' },
+      { time: '15:30', activity: 'Passeggiata ai piedi del Sentiero del Ponale (solo tratto iniziale)', note: 'Fondo asfaltato e piana fino alla vecchia casetta prima della salita' },
+      { time: '18:00', activity: 'Sosta golosa da Garda Foodie per lievitati e merenda artigianale', note: 'Tavoli spaziosi all’aperto ideali per la carrozzina' }
     ],
     morningProposal: {
-      title: 'Piazza III Novembre & Torre Apponale',
-      description: 'Il cuore storico di Riva: selciato piano, vicoli medievali e terrazze dei caffè.',
-      timeEstimate: 'Circa 2h'
+      title: 'Piazza III Novembre & Fossato della Rocca',
+      description: 'L’eleganza asburgica di Riva, le facciate colorate e il laghetto delle ninfee della Rocca.',
+      timeEstimate: '2h di passeggiata lenta'
     },
     afternoonProposal: {
-      title: 'Giardini della Rocca del MAG',
-      description: 'Il castello sull’acqua con il parco circostante e i canali fioriti.',
-      timeEstimate: 'Circa 1h30'
-    },
-    rainPlan: {
-      title: 'Museo Alto Garda (MAG) alla Rocca di Riva',
-      indoorActivity: 'La corte interna e le sale a piano terra della Rocca offrono un riparo storico accessibile anche con carrozzina.',
-      notes: 'Biglietto cumulativo e bagni con nursery.'
-    },
-    walkDetails: {
-      pathName: 'Centro Pedonale di Riva del Garda',
-      surface: 'Lastricato in pietra liscia e marciapiedi',
-      strollerAccessibility: 'Ottima in tutto il centro storico pedonale',
-      shadeLevel: 'Ombra degli edifici storici e dei portici'
-    },
-    camperStop: {
-      name: 'Area Sosta Camper Brione (Riva)',
-      coordinates: [45.8885, 10.8572],
-      has220V: true,
-      services: 'Allaccio 220V continuo',
-      notes: 'Terza e ultima notte a Riva: domani trasferimento breve a Comano'
-    },
-    babyTips: {
-      feedingSpots: 'Giardini del Brolio dietro la Rocca, silenziosi e poco affollati',
-      diaperPoints: 'Nursery pubblica presso i giardini di Porta San Marco',
-      comfortNotes: 'Mantenere il ciuccio a portata durante le passeggiate con brezza d’Ora'
-    },
-    medicalNearby: {
-      pharmacy: 'Farmacia Rivana - Piazza Cavour 2, Riva (Tel. 0464 552251)',
-      urgentCare: 'Ospedale di Arco (5 km)',
-      emergencyPhone: '112'
-    },
-    gastronomy: {
-      dishes: ['Canederli al burro fuso e salvia', 'Torta di noci del Garda'],
-      recommendedSpots: 'Ristorante Pizzeria Bavaria o Osteria La Contrada (centro storico)'
-    },
-    specialSpots: [
-      { type: "Frantoio & Cantina", name: "Madonna delle Vittorie", location: "Linfano / Arco", description: "Olio extravergine di oliva Garda DOP e cantina a filiera corta." },
-      { type: "Apicoltura Biologica", name: "Agriturismo Maso Bòtes", location: "Arco", description: "Apicoltura biologica con miele artigianale, asinelli e uliveto storico in collina." }
-    ]
-  },
-  {
-    id: 4,
-    dayNumber: 4,
-    date: '18 Set',
-    title: 'Dall’Alto Garda al Parco Termale di Comano',
-    route: 'Riva del Garda → Lago di Toblino → Ponte Arche',
-    distanceKm: 32,
-    drivingTime: '45–60 min',
-    altitudeMeters: 400,
-    baseName: 'Ponte Arche / Comano (Base 2)',
-    nightsInBase: 3,
-    mobility: 'Carrozzina',
-    summary: 'Salita graduale nella Valle del Sarca (quota 400 m, ampiamente sotto la soglia di sicurezza dei 900 m). Sosta panoramica facoltativa a Toblino e arrivo a Comano.',
-    coordinates: [46.0375, 10.8711],
-    schedule: [
-      { time: '10:00', activity: 'Partenza da Riva direzione Valle dei Laghi', note: 'Strada statale SS45bis comoda e panoramica' },
-      { time: '10:45', activity: 'Sosta rigenerante al Lago di Toblino', note: 'Passerella in legno pianeggiante a pelo d’acqua con carrozzina di fronte al castello' },
-      { time: '12:00', activity: 'Arrivo a Ponte Arche / Comano Terme', note: 'Sistemazione nell’area camper in via Lungo Sarca e allaccio 220V' },
-      { time: '13:00', activity: 'Pranzo in camper e prima poppata a quota 400m', note: 'Aria balsamica di collina' },
-      { time: '15:30', activity: 'Primo giro esplorativo nel Parco Termale di Comano', note: '14 ettari di parco totalmente pianeggiante, viali alberati perfetti per carrozzina' }
-    ],
-    morningProposal: {
-      title: 'Passerella del Castello di Toblino',
-      description: 'Breve camminata in riva al canneto su tavole in legno con vista sul castello da fiaba.',
-      timeEstimate: '45 min di passeggiata tranquilla'
-    },
-    afternoonProposal: {
-      title: 'Primo giro nel Parco delle Terme di Comano',
-      description: 'Viali larghi e asfalto perfetto tra abeti, tigli e il rumore rilassante del fiume Sarca.',
+      title: 'Foce del Ponale & Merenda Artigianale',
+      description: 'La vista mozzafiato sulla parete rocciosa a picco e ritorno verso la pasticceria gourmet.',
       timeEstimate: '1h30'
     },
     rainPlan: {
-      title: 'Galleria Termale e Chioschi Coperti di Comano',
-      indoorActivity: 'La struttura centrale del parco termale e i porticati dei bar offrono ampi spazi caldi e coperti per passeggiare con Eden.',
-      notes: 'Attenzione: nessun bagno termale per la neonata (le acque sono riservate alla cura dermatologica pediatrica a partire dai 6-8 mesi, solo su prescrizione).'
+      title: 'Portici e Cortili di Riva',
+      indoorActivity: 'Camminamento interamente coperto sotto i portici medievali di Piazza Tre Novembre e Via Roma.',
+      notes: 'Tutti i negozi e bar sono a filo strada senza barriere.'
     },
     walkDetails: {
-      pathName: 'Anello dei Tigli nel Parco Termale',
-      surface: 'Asfalto liscio e viali in ghiaia compattata finissima',
-      strollerAccessibility: '100% eccellente per la carrozzina',
-      shadeLevel: 'Massima (bosco-parco secolare)'
+      pathName: 'Anello Storico di Riva e Giardini di Porta Orientale',
+      surface: 'Pavimentazione in porfido liscio e marciapiedi ampi',
+      strollerAccessibility: '100% adatta a carrozzine',
+      shadeLevel: 'Fitta nei vicoli e nei parchi cittadini'
     },
     camperStop: {
-      name: 'Area Camper Ponte Arche (via Lungo Sarca)',
-      coordinates: [46.0358, 10.8732],
+      name: 'Area Camper Brione (Riva del Garda)',
+      coordinates: [45.8885, 10.8572],
       has220V: true,
-      services: 'Allaccio 220V, camper service, colonnine ricarica, accesso diretto pedonale al parco',
-      notes: 'Pianeggiante e tranquilla, vicinissima al centro abitato di Ponte Arche. Alternativa: parcheggi del parco.'
+      services: 'Allaccio 220V continuo, carico acqua e scarico serbatoi in vista della partenza di domani',
+      notes: 'Terza e ultima notte a Riva del Garda'
     },
-    freeCamperAlternatives: [
-      { name: "Trento Area Camper Zuffo", location: "Piazzale Zuffo, Trento", rating: "3.3 / 5", services: "Parcheggio comunale gratuito nelle prime 48 ore con camper service gratuito", whyOmittedNote: "Dista circa 18 km dalla Valle dei Laghi e da Comano Terme. Comoda per visitare Trento, ma costringerebbe a percorrere mezz'ora di strada ogni giorno per raggiungere il parco termale e le passeggiate con Eden." }
-    ],
     babyTips: {
-      feedingSpots: 'Panchine coperte del gazebo centrale nel parco termale',
-      diaperPoints: 'Servizi igienici del parco termale dotati di nursery riscaldata',
-      comfortNotes: 'Quota 400m è ideale: ossigenazione perfetta per i polmoncini di Eden'
+      feedingSpots: 'Giardini attorno al fossato della Rocca di Riva',
+      diaperPoints: 'Bagni pubblici accessibili e puliti vicino al porto di Riva',
+      comfortNotes: 'Temperatura mite e costante tra i 22 e i 25 gradi'
     },
     medicalNearby: {
-      pharmacy: 'Farmacia Comano Terme - Via Battisti 4, Ponte Arche (Tel. 0465 701434)',
-      urgentCare: 'Ospedale di Tione di Trento (a 15 km, Pronto Soccorso attivo 24/7)',
+      pharmacy: 'Farmacia Alla Madonna - Via Fiume 24, Riva (Tel. 0464 552554)',
+      urgentCare: 'Pronto Soccorso Ospedale di Arco (5 km)',
       emergencyPhone: '112'
     },
     gastronomy: {
-      dishes: ['Ciiuìga del Banale (Presidio Slow Food)', 'Noci del Bleggio', 'Formaggio Spressa delle Giudicarie DOP'],
-      recommendedSpots: 'Trattoria Da Lucio o bottega contadina a Ponte Arche'
+      dishes: ['Molche (pasta di olive nere tipica gardesana)', 'Torta di noci del Bleggio'],
+      recommendedSpots: 'Osteria La Contrada o Ristorante Al Volt'
     },
     specialSpots: [
-      { type: "Ristorante con Vista", name: "Ristorante Bar Castel Toblino", location: "Lago di Toblino", description: "Cucina del territorio e vista romantica all'interno del castello cinquecentesco sull'acqua." },
-      { type: "Azienda Biodinamica", name: "Cantina Fratelli Pisoni", location: "Pergolese (Valle dei Laghi)", description: "Vini biologici naturali e confetture artigianali con certificazione Demeter." }
+      { type: "Frantoio & Cantina a filiera corta", name: "Madonna delle Vittorie", location: "Arco", description: "Frantoio artigianale con degustazione di olio extravergine del Garda e cucina a km zero." },
+      { type: "Apicoltura & Asini", name: "Agriturismo Maso Bòtes", location: "Arco", description: "Uliveto storico millenario, apicoltura biologica certificata e fattoria didattica con asini." }
     ]
   },
   {
     id: 5,
     dayNumber: 5,
     date: '19 Set',
-    title: 'La Quiete del Parco di Comano e la Passeggiata sul Sarca',
-    route: 'Spostamenti a piedi a Ponte Arche',
-    distanceKm: 0,
-    drivingTime: '0 min (Camper fermo)',
+    title: 'Valle dei Laghi, Lago di Toblino e Comano Terme',
+    route: 'Riva del Garda → Lago di Toblino → Comano Terme (Ponte Arche)',
+    distanceKm: 32,
+    drivingTime: '40 min complessivi (guida dolce)',
     altitudeMeters: 400,
     baseName: 'Ponte Arche / Comano (Base 2)',
     nightsInBase: 3,
     mobility: 'Carrozzina',
-    summary: 'Giornata all’insegna della lentezza e del benessere: passeggiate lungo il corso limpido del fiume Sarca e riposini all’ombra dei grandi pini.',
-    coordinates: [46.0375, 10.8711],
+    summary: 'Spostamento breve e rilassante attraverso la Valle dei Laghi. Sosta panoramica sulla passerella in legno del Lago di Toblino e arrivo nella quiete termale di Comano.',
+    coordinates: [46.0358, 10.8732],
     schedule: [
-      { time: '09:30', activity: 'Colazione calma e poppata in piazzola', note: 'Temperatura frizzante del mattino alpino' },
-      { time: '10:30', activity: 'Passeggiata lungo il tratto arginale del fiume Sarca', note: 'Sentiero pedonale pianeggiante con carrozzina, ponticelli in legno e anatre' },
-      { time: '12:30', activity: 'Pranzo in camper e siesta prolungata', note: 'Ambiente silenzioso a contatto con la natura' },
-      { time: '15:30', activity: 'Secondo anello nel parco termale verso il percorso vita', note: 'Zone prative ampie per stendere la coperta da pic-nic' },
-      { time: '18:00', activity: 'Giro nella piazzetta di Ponte Arche per pane fresco e formaggi', note: 'Tutto a pochi passi dalla sosta' }
+      { time: '10:00', activity: 'Partenza post-poppata da Riva lungo la SS45bis', note: 'Strada comoda e panoramica tra vigneti e pareti di roccia' },
+      { time: '10:35', activity: 'Sosta sulla passerella del biotopo del Lago di Toblino', note: 'Passerella a pelo d’acqua liscia e ombreggiata con vista su Castel Toblino' },
+      { time: '12:00', activity: 'Risalita verso Ponte Arche / Comano Terme (quota 400 m)', note: 'Salita graduale e dolcissima, pressione e orecchie perfette per Eden' },
+      { time: '12:30', activity: 'Arrivo all’Area Camper di Ponte Arche e allaccio 220V', note: 'Piazzola a due passi dal parco termale' },
+      { time: '16:00', activity: 'Passeggiata nel Parco Termale di Comano (14 ettari pianeggianti)', note: 'Viali asfaltati, scoiattoli, grandi abeti e aria purissima' }
     ],
     morningProposal: {
-      title: 'Passeggiata Fluviale sul Sarca',
-      description: 'Lungo il fiume alpino con ponti pedonali e panchine ogni 50 metri.',
-      timeEstimate: '1h30'
+      title: 'Passerella sul Lago di Toblino & Castel Toblino',
+      description: 'Il camminamento in legno sospeso sull’acqua tra canneti e ninfee.',
+      timeEstimate: '1h di passeggiata liscia'
     },
     afternoonProposal: {
-      title: 'Prato dei Faggi nel Parco di Comano',
-      description: 'Relax sull’erba curata con carrozzina all’ombra naturale dei faggi secolari.',
-      timeEstimate: '2h di relax totale'
+      title: 'I Viali Monumentali del Parco Termale di Comano',
+      description: '14 ettari di verde protetto senza auto lungo il torrente Sarca.',
+      timeEstimate: '2h con carrozzina'
     },
     rainPlan: {
-      title: 'Biblioteca e Caffè Termale di Ponte Arche',
-      indoorActivity: 'Ambienti accoglienti e riscaldati nel centro del paese a 200 metri dal camper per leggere o allattare al caldo.',
-      notes: 'Rientro facile in camper in caso di temporale passeggero.'
+      title: 'Stabilimento Termale e Porticato di Comano',
+      indoorActivity: 'La grande hall termale di Comano e i portici offrono uno spazio riscaldato e silenzioso per poppata e cambio.',
+      notes: 'Struttura dotata di ascensori e fasciatoi.'
     },
     walkDetails: {
-      pathName: 'Sentiero Fluviale & Parco Terme',
-      surface: 'Asfalto e terra battuta fine',
-      strollerAccessibility: '100% adatta a carrozzine standard',
-      shadeLevel: 'Altissima'
+      pathName: 'Anello del Parco delle Terme di Comano',
+      surface: 'Asfalto perfetto e vialetti complanari lisci',
+      strollerAccessibility: '100% adatto alla carrozzina (ideale)',
+      shadeLevel: 'Totale grazie a pini, ippocastani e faggi centenari'
     },
     camperStop: {
       name: 'Area Camper Ponte Arche (via Lungo Sarca)',
       coordinates: [46.0358, 10.8732],
       has220V: true,
-      services: 'Allaccio 220V continuo',
-      notes: 'Seconda notte nella pace di Comano'
+      services: 'Allaccio 220V, carico e scarico, a 300m dal parco termale e dai negozi',
+      notes: 'Prima notte a Comano. Clima fresco e notti silenziose ideali per il sonno del bebè.'
     },
     babyTips: {
-      feedingSpots: 'Panchine vicino alla fontanella d’acqua oligominerale di Comano',
-      diaperPoints: 'Camper adiacente al parco',
-      comfortNotes: 'Copertina leggera per Eden durante i passaggi nelle zone più ombreggiate'
+      feedingSpots: 'Chiosco e panchine del parco termale vicino al laghetto delle trote',
+      diaperPoints: 'Tavolo camper o servizi igienici del padiglione termale',
+      comfortNotes: 'A Comano l’aria è pulita e priva di umidità: ideale per la respirazione dei neonati'
     },
     medicalNearby: {
-      pharmacy: 'Farmacia Comano Terme - Via Battisti 4 (Tel. 0465 701434)',
-      urgentCare: 'Guardia Medica Ponte Arche / Ospedale Tione di Trento',
+      pharmacy: 'Farmacia Comano Terme - Ponte Arche (Tel. 0465 701235)',
+      urgentCare: 'Guardia Medica Ponte Arche (a 400 m) / Ospedale di Tione (15 km)',
       emergencyPhone: '112'
     },
     gastronomy: {
-      dishes: ['Strangolapreti trentini agli spinaci', 'Torta di mele cotogne'],
-      recommendedSpots: 'Pasticceria d’Autore a Ponte Arche (brioche artigianali e caffè)'
-    }
+      dishes: ['Ciuiça del Bleggio con patate e crauti', 'Noci del Bleggio DOP', 'Torta di carote e mandorle'],
+      recommendedSpots: 'Osteria del Parco a Ponte Arche o Ristorante Posta'
+    },
+    freeCamperAlternatives: [
+      { name: "Parcheggio Sarche / Lago di Toblino", location: "Via Caffaro, Sarche", rating: "4.3 / 5", services: "Parcheggio pubblico gratuito su asfalto", whyOmittedNote: "Ottimo per una sosta panoramica diurna di 1 ora per passeggiare sulla passerella del biotopo lacustre, ma sconsigliato per la notte in quanto privo di corrente 220V ed esposto al rumore del traffico della statale del Limarò." }
+    ]
   }
 ];

@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [1.3.0] - 2026-09-14
+
+### Modificato & Ottimizzato
+- **Nuovo Calendario e Ribilanciamento 14 Notti (15–29 Settembre 2026)**:
+  - *Partenza Serale (15 Set dopo le 20:00)*: Tratta comoda di 50 min Pisa → Sarzana (Area Camper Piazza Terzi) per passare la prima notte all'imbocco della Cisa senza stancare la neonata.
+  - *Rientro a Pisa (29 Set ore 11:00 precise)*: Rientro garantito e senza stress partendo alle 10:15 dopo la poppata.
+  - *Eliminazione Doppione Sarzana/Versilia al ritorno*: L'ultima notte (28 Set) viene trascorsa a **Lucca** (Area Camper Il Serchio con 220V), superando la Cisa già nel pomeriggio del 28 e godendosi l'anello delle Mura Rinascimentali in carrozzina. La mattina del 29 restano solo 22 km (25 min) da percorrere fino a Pisa.
+  - *Basi Stanziali Garantite*: 3 notti a Riva del Garda, 3 notti a Comano Terme, 3 notti a Lago di Levico, 3 notti a Lazise.
+
 ## [1.2.0] - 2026-09-14
 
 ### Aggiunto
