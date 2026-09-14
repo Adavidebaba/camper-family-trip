@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Guida Camper Family: Toscana, Marche, Umbria e Tuscia (15-29 Set)</title>
-  <meta name="description" content="Guida completa di viaggio in camper con neonata: itinerario 15-29 Settembre, tappe baby-friendly, mobilità carrozzina e marsupio, aree sosta 220V e mappa interattiva.">
+  <title>In camper con Eden · Trentino, Laghi & Garda (15–30 Settembre 2026)</title>
+  <meta name="description" content="Guida di viaggio in camper con la neonata Eden: 15-30 Settembre, 5 basi da 3 notti, quote sicure sotto 850m, passeggiate in carrozzina e piani pioggia.">
   <meta name="theme-color" content="#193329">
 
   <!-- Typography: Google Fonts -->
@@ -28,42 +28,43 @@
       <div class="hero-banner">
         <!-- Switcher Tour -->
         <div class="tour-switcher-bar">
-          <span class="tour-switcher-label">📍 Tour: Centro Italia (Tuscia, Marche & Umbria)</span>
-          <a href="eden.html" class="tour-switcher-btn">🌲 Passa a Tour Trentino con Eden</a>
+          <span class="tour-switcher-label">📍 Tour: Trentino, Laghi & Garda</span>
+          <a href="index.html" class="tour-switcher-btn">🔄 Passa a Tour Centro Italia</a>
         </div>
 
-        <div class="hero-top-tag">🚐 Family Road Trip • Settembre 2026</div>
-        <h1 class="hero-title">In Camper con Bimba & Mamma</h1>
+        <div class="hero-top-tag">🌲 Road Trip con Eden • 15–30 Settembre 2026</div>
+        <h1 class="hero-title">Che cosa facciamo oggi, Eden?</h1>
         <p class="hero-subtitle">
-          Guida pratica e completa dal 15 al 29 Settembre: orari rilassati post-poppata, itinerari carrozzina & marsupio, aree sosta sicure con allaccio 220V e sapori autentici.
+          Sedici giorni tra Riva del Garda, le Terme di Comano, il Lago di Levico, Lazise e la Val di Magra. 
+          Bassa quota garantita (sotto gli 850 m), tre notti stanziali per ogni base e la carrozzina come prima scelta.
         </p>
         
         <!-- Strip Statistiche -->
         <div class="stats-strip">
           <div class="stat-item">
             <span class="stat-label">Durata</span>
-            <span class="stat-value">15 Giorni</span>
+            <span class="stat-value">16 Giorni</span>
           </div>
           <div class="stat-item">
-            <span class="stat-label">Periodo</span>
-            <span class="stat-value">15 - 29 Set</span>
+            <span class="stat-label">Basi Stanziali</span>
+            <span class="stat-value">5 (3 notti cad.)</span>
           </div>
           <div class="stat-item">
-            <span class="stat-label">Percorso Totale</span>
-            <span class="stat-value">~885 km</span>
+            <span class="stat-label">Limite Quota</span>
+            <span class="stat-value">&lt; 850 m (Sicura)</span>
           </div>
           <div class="stat-item">
-            <span class="stat-label">Soste Notte</span>
-            <span class="stat-value">100% 220V</span>
+            <span class="stat-label">Mobilità</span>
+            <span class="stat-value">100% Carrozzina</span>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Navigatore a Scorrimento Orizzontale Giorni (Mobile Friendly) -->
-    <nav class="day-slider-section" aria-label="Selettore Tappe Giornaliere">
+    <!-- Navigatore a Scorrimento Orizzontale Giorni (15 - 30 Set) -->
+    <nav class="day-slider-section" aria-label="Selettore Tappe Eden">
       <div class="day-slider-header">
-        <span class="day-slider-title">📅 Scegli la Tappa</span>
+        <span class="day-slider-title">📅 Seleziona il Giorno di Eden</span>
         <div style="display: flex; gap: 6px;">
           <button id="prevDayBtn" class="day-slider-nav-btn" aria-label="Tappa Precedente">◀ Prec</button>
           <button id="nextDayBtn" class="day-slider-nav-btn" aria-label="Tappa Successiva">Succ ▶</button>
@@ -78,14 +79,14 @@
     <main class="main-content-layout">
       <!-- Scheda Dettaglio Giornata Selezionata -->
       <section id="dayDetailContainer" aria-live="polite">
-        <!-- Renderizzato da DayViewModel.js -->
+        <!-- Renderizzato da EdenDayViewModel.js -->
       </section>
 
       <!-- Pannello Mappa Interattiva -->
       <aside class="map-sticky-container">
         <div class="map-panel">
           <div class="map-header">
-            <h3 class="map-title">🗺️ Mappa Itinerario & Tappe</h3>
+            <h3 class="map-title">🗺️ Mappa Itinerario con Eden</h3>
             <span class="map-hint">Tocca un numero per aprire la tappa</span>
           </div>
           <div id="leafletMap"></div>
@@ -98,6 +99,6 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
   <!-- Script Modulare Applicativo -->
-  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/edenApp.js"></script>
 </body>
 </html>

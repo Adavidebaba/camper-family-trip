@@ -1,0 +1,464 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#285e55">
+<title>Con Eden · Attività giorno per giorno · Settembre 2026</title>
+
+<style>
+:root{
+  --bg:#f5f2eb;
+  --paper:#fffefa;
+  --ink:#263830;
+  --muted:#657269;
+  --green:#285e55;
+  --mint:#e8f0e9;
+  --gold:#faf0d8;
+  --blue:#eaf0f5;
+  --border:#dce1d8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+a{color:var(--green);text-underline-offset:3px}
+button,select{font:inherit}
+button{
+  border:1px solid var(--green);background:var(--green);color:white;
+  padding:10px 15px;border-radius:9px;cursor:pointer;
+}
+button.secondary{background:white;color:var(--green)}
+a:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:3px solid #b58b37;outline-offset:4px
+}
+.wrap{max-width:1120px;margin:auto}
+header{
+  padding:45px 22px;background:linear-gradient(120deg,#193e38,#427769);color:white
+}
+header h1{font-size:clamp(2rem,5.5vw,3.6rem);line-height:1.15;margin:10px 0 18px}
+header p{max-width:820px}
+.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:.8rem}
+nav{background:var(--paper);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;flex-wrap:wrap;gap:9px 20px;padding:15px 22px}
+nav a{text-decoration:none;font-weight:700}
+main{padding:24px 20px 55px}
+h2{font-size:1.75rem;line-height:1.3;margin:34px 0 15px}
+h3{line-height:1.35;margin:0 0 10px}
+h4{margin:0 0 8px}
+p{margin:0 0 12px}
+li{margin:5px 0}
+ul,ol{padding-left:22px}
+.actions,.tags,.links{display:flex;gap:8px;flex-wrap:wrap}
+.tag{
+  display:inline-block;background:var(--mint);color:var(--green);
+  font-size:.8rem;border-radius:20px;padding:4px 10px;font-weight:700
+}
+.tag.move{background:var(--gold);color:#7d5b1d}
+.tag.rain{background:var(--blue);color:#3e5d75}
+.notice{
+  background:var(--mint);border-left:4px solid var(--green);
+  padding:17px 19px;margin:18px 0;border-radius:0 12px 12px 0
+}
+.notice.warn{background:var(--gold);border-color:#aa8230}
+.small{font-size:.9rem;color:var(--muted)}
+.intro,.card{
+  background:var(--paper);border:1px solid var(--border);
+  padding:22px;border-radius:13px
+}
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px
+}
+details.day{
+  background:var(--paper);border:1px solid var(--border);
+  border-radius:14px;margin:17px 0;overflow:hidden
+}
+summary{
+  padding:20px;cursor:pointer;font-weight:800;font-size:1.1rem
+}
+summary:hover{background:#eef3ed}
+summary small{
+  display:block;font-size:.88rem;font-weight:450;color:var(--muted);
+  margin:5px 0 0 19px
+}
+.day-body{padding:0 20px 22px}
+.halves{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:16px}
+.half{padding:19px;border:1px solid var(--border);border-radius:12px}
+.half.morning{background:#fffaf0}
+.half.afternoon{background:#f0f6f0}
+.label{
+  font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;
+  font-weight:800;color:var(--green);margin-bottom:8px
+}
+.meta{
+  border-top:1px solid var(--border);padding-top:10px;margin-top:12px;
+  font-size:.9rem
+}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:15px}
+.extra{background:#f2f3ef;padding:15px;border-radius:10px}
+.extra.rain{background:var(--blue)}
+.links{margin-top:15px}
+.links a{
+  background:white;border:1px solid var(--border);border-radius:8px;
+  padding:7px 10px;font-size:.9rem
+}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:11px;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--mint)}
+footer{padding:25px 20px;border-top:1px solid var(--border);color:var(--muted)}
+@media(max-width:720px){
+  .halves,.extras{grid-template-columns:1fr}
+  .day-body{padding:0 14px 18px}
+  .half{padding:15px}
+  summary{padding:17px}
+}
+@media print{
+  body{background:white;color:black;font-size:10.5pt}
+  header{background:white;color:black;padding:0 0 15px}
+  header h1{font-size:28pt}
+  nav,.no-print{display:none!important}
+  main{padding:0}
+  .halves,.extras,.grid{display:block}
+  .half,.extra,.card{margin-bottom:10px}
+  .day-body{display:block!important}
+  details.day{break-inside:auto;box-shadow:none}
+  .half,.extra{break-inside:avoid}
+  summary{list-style:none}
+  a{color:black}
+  .links a{border:0;padding:2px 6px 2px 0}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">La guida delle esperienze · 15–30 settembre 2026</div>
+    <h1>Che cosa facciamo oggi, Eden?</h1>
+    <p>
+      Sedici giorni fra lago, parchi, borghi e foce del Magra.
+      Ogni giornata ha una proposta per la mattina e una per il pomeriggio:
+      potete seguirle entrambe, sceglierne una sola oppure restare dove state bene.
+    </p>
+    <p><strong>
+      Pisa → Riva → Comano → Levico → Lazise → Sarzana / Val di Magra → Pisa
+    </strong></p>
+  </div>
+</header>
+
+<nav aria-label="Navigazione">
+  <div class="wrap">
+    <a href="#istruzioni">Come usarla</a>
+    <a href="#riva">Riva</a>
+    <a href="#comano">Comano</a>
+    <a href="#levico">Levico</a>
+    <a href="#lazise">Lazise</a>
+    <a href="#liguria">Liguria</a>
+    <a href="#facoltative">Esperienze extra</a>
+    <a href="#riepilogo">Riepilogo</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="actions no-print">
+    <button type="button" id="print">Stampa / salva PDF</button>
+    <button type="button" id="open" class="secondary">Apri tutti i giorni</button>
+    <button type="button" id="close" class="secondary">Chiudi tutti i giorni</button>
+    <a href="viaggio-con-eden.html">Apri la pagina logistica</a>
+  </div>
+
+  <section id="istruzioni">
+    <div class="notice">
+      <strong>Offline:</strong> tutto il programma è dentro questa pagina.
+      Soltanto mappe e siti esterni richiedono internet.
+      Il collegamento alla pagina logistica funziona se il file
+      “viaggio-con-eden.html” è nella stessa cartella.
+    </div>
+
+    <div class="notice warn">
+      <strong>Informazioni da verificare:</strong>
+      non sono stati controllati in tempo reale aperture, tariffe,
+      accessibilità degli interni, parcheggi e autobus di settembre 2026.
+      Le passeggiate sono proposte orientative, non percorsi collaudati
+      metro per metro. I link aprono ricerche cartografiche.
+    </div>
+
+    <div class="intro">
+      <h2 style="margin-top:0">Due possibilità al giorno, non due impegni</h2>
+      <ul>
+        <li><strong>Mattina e pomeriggio non hanno orari rigidi:</strong> partite dopo una poppata e quando siete pronti.</li>
+        <li><strong>Le durate indicano il tempo da dedicare all’esperienza,</strong> comprese piccole pause, ma non tutte le necessità di Eden.</li>
+        <li><strong>Le distanze indicate sono quelle della passeggiata descritta,</strong> escluse eventuali camminate dalla piazzola.</li>
+        <li><strong>Carrozzina come prima scelta.</strong> Nessuna attività principale richiede il marsupio.</li>
+        <li><strong>Nei giorni con escursione esterna, fare una sola uscita:</strong> non rientrare al camper per poi ripartire verso un altro paese.</li>
+        <li><strong>Con vento, stanchezza o recupero post parto impegnativo,</strong> accorciare senza cercare un’attività sostitutiva.</li>
+      </ul>
+      <p>
+        Le esperienze esterne a piedi dalla base sono indicate come tali.
+        Quando serve spostare il camper o prendere un autobus, è scritto esplicitamente.
+        Non sono suggerite linee di autobus non verificate.
+      </p>
+    </div>
+  </section>
+
+  <section id="riva">
+    <h2>Prima base · Riva del Garda</h2>
+    <p>
+      Base di riferimento: zona Brione. Il lungolago orientale è l’uscita facile;
+      il centro richiede una passeggiata più lunga, da non ripetere obbligatoriamente ogni giorno.
+    </p>
+
+    
+
+    
+
+    
+  </section>
+
+  <section id="comano">
+    <h2>Seconda base · Comano e Ponte Arche</h2>
+    <p>
+      Il parco è la risorsa quotidiana. Per aggiungere un’esperienza diversa,
+      è prevista una sola escursione facoltativa a Fiavé, non tre giorni di spostamenti.
+    </p>
+
+    
+
+    
+
+    
+  </section>
+
+  <section id="levico">
+    <h2>Terza base · Levico</h2>
+    <p>
+      Due esperienze distinte: il lago in basso e il centro con il Parco Asburgico più in alto.
+      Non considerare il collegamento fra i due una passeggiata pianeggiante.
+    </p>
+
+    
+
+    
+
+    
+  </section>
+
+  <section id="lazise">
+    <h2>Quarta base · Lazise</h2>
+    <p>
+      Qui porto, mura e lungolago permettono giornate varie senza spostare il camper.
+      Colà, fattorie e terme sono alternative facoltative, non visite da aggiungere tutte.
+    </p>
+
+    
+
+    
+
+    
+  </section>
+
+  <section id="liguria">
+    <h2>Quinta base · Sarzana e Val di Magra</h2>
+    <p>
+      Sarzana offre il centro a piedi. Bocca di Magra è una sola uscita facoltativa,
+      da organizzare senza pretendere che città, fiume e mare siano tutti
+      raggiungibili dalla stessa piazzola.
+    </p>
+
+    
+
+    
+
+    
+
+    
+  </section>
+
+  <section id="facoltative">
+    <h2>Esperienze extra: come sceglierle senza sovraccaricare il viaggio</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Miele e olio nell’Alto Garda</h3>
+        <p>
+          <strong>Candidati:</strong> Maso Bòtes nell’area di Arco;
+          Madonna delle Vittorie nell’area di Linfano.
+        </p>
+        <p>
+          Chiedere una visita breve, eventuale vendita diretta,
+          possibilità di arrivare con camper e carrozzina.
+          Non presumere fattoria didattica, contatto con animali
+          o certificazioni biologiche aggiornate.
+        </p>
+        <p><strong>Dove inserirla:</strong> il 17, al posto della visita completa al centro di Riva.</p>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Maso+Botes+Arco" target="_blank" rel="noopener noreferrer">Maso Bòtes</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Madonna+delle+Vittorie+Linfano" target="_blank" rel="noopener noreferrer">Madonna delle Vittorie</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Una cantina nella Valle dei Laghi</h3>
+        <p><strong>Candidato:</strong> Fratelli Pisoni, Pergolese.</p>
+        <p>
+          Visita breve su appuntamento, se compatibile con il trasferimento.
+          Non sono confermati certificazione Demeter corrente, confetture
+          o altre attività citate nelle prime bozze.
+          Chi guida non beve alcol.
+        </p>
+        <p><strong>Dove inserirla:</strong> il 18, al posto di Toblino, non in aggiunta.</p>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Fratelli+Pisoni+Pergolese" target="_blank" rel="noopener noreferrer">Fratelli Pisoni</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Una visita in fattoria sul basso Garda</h3>
+        <p><strong>Candidato:</strong> La Pesenata.</p>
+        <p>
+          Prima di partire chiedere indirizzo esatto, contenuto della visita,
+          presenza di animali, fondo dei percorsi, bagni e durata.
+          Le caratteristiche attuali e le certificazioni non sono state verificate.
+        </p>
+        <p><strong>Dove inserirla:</strong> il 26, come unica escursione esterna della giornata.</p>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=La+Pesenata" target="_blank" rel="noopener noreferrer">La Pesenata</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="notice">
+      <strong>Messaggio da inviare prima di una visita:</strong><br>
+      “Siamo due adulti con una neonata di circa un mese.
+      Vorremmo una visita breve e tranquilla. Il percorso è adatto a una carrozzina,
+      senza scale e fondo sconnesso? Possiamo parcheggiare un camper?
+      Ci sono un luogo comodo per fermarsi e servizi igienici?
+      Possiamo interrompere la visita se la bimba ne ha bisogno?”
+    </div>
+  </section>
+
+  <section id="riepilogo">
+    <h2>Tutto il viaggio in un colpo d’occhio</h2>
+    <div class="card table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Data</th>
+            <th scope="col">Mattina</th>
+            <th scope="col">Pomeriggio</th>
+            <th scope="col">Spostamento extra</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>15</td><td>Partenza e pausa Pontremoli</td><td>Pausa emiliana, arrivo e lago facoltativo</td><td>Trasferimento principale</td></tr>
+          <tr><td>16</td><td>San Nicolò e Pini</td><td>Sabbioni, Punta Lido facoltativo</td><td>No</td></tr>
+          <tr><td>17</td><td>Centro di Riva e piazza III Novembre</td><td>Rocca / MAG</td><td>Collegamento al centro da valutare</td></tr>
+          <tr><td>18</td><td>Toblino durante il trasferimento</td><td>Primo giro nel parco di Comano</td><td>Toblino facoltativo</td></tr>
+          <tr><td>19</td><td>Parco di Comano</td><td>Ponte Arche e tratto comodo sul Sarca</td><td>No</td></tr>
+          <tr><td>20</td><td>Museo delle Palafitte di Fiavé</td><td>Paese / archeologia facoltativa / rientro</td><td>Sì, escursione facoltativa</td></tr>
+          <tr><td>21</td><td>Trasferimento a Levico</td><td>Lido e riva</td><td>Solo trasferimento</td></tr>
+          <tr><td>22</td><td>Strada dei Pescatori breve</td><td>Prato, lago e merenda</td><td>No</td></tr>
+          <tr><td>23</td><td>Parco Asburgico</td><td>Centro e via Regia</td><td>Collegamento dal lago da organizzare</td></tr>
+          <tr><td>24</td><td>Trasferimento a Lazise</td><td>Porto e San Nicolò</td><td>Solo trasferimento</td></tr>
+          <tr><td>25</td><td>Mura, piazza e Dogana Veneta</td><td>Lungolago verso Cisano, tratto breve</td><td>No</td></tr>
+          <tr><td>26</td><td>Colazione e borgo</td><td>Lago oppure una sola esperienza agricola</td><td>Solo se scegliete l’azienda</td></tr>
+          <tr><td>27</td><td>Pausa a Fontanellato</td><td>Arrivo a Sarzana</td><td>Trasferimento principale</td></tr>
+          <tr><td>28</td><td>Via Mazzini, Sant’Andrea e piazza</td><td>Cattedrale e Firmafede</td><td>No</td></tr>
+          <tr><td>29</td><td>Bocca di Magra facoltativa</td><td>Riposo e ultimo giro a Sarzana</td><td>Sì, solo se desiderato</td></tr>
+          <tr><td>30</td><td>Colazione e rientro</td><td>Riconsegna e casa</td><td>Rientro</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="notice warn">
+      <strong>Con Eden:</strong>
+      le proposte non sostituiscono il piano concordato con il pediatra.
+      Durante la marcia usare il sistema di ritenuta correttamente installato;
+      fermarsi per poppata e cambio.
+      Nessun bagno termale o salita in quota è implicito nel programma.
+      Nel marsupio, se usato, viso visibile e vie aeree libere.
+    </div>
+
+    <div class="notice">
+      <strong>La scelta che rende bello questo viaggio:</strong>
+      non utilizzare il marsupio per “conquistare” un’attività inadatta,
+      non spostare il camper per riempire un pomeriggio e non sommare tutte le alternative.
+      La carrozzina, una passeggiata piacevole e la possibilità di tornare indietro
+      sono già un ottimo programma.
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      Guida attività · 15–30 settembre 2026 · Consultabile offline.
+      Aperture, accessibilità, trasporti e condizioni locali da verificare.
+      Nessuna prenotazione effettuata.
+    </p>
+    <p>
+      Pagina complementare alla guida logistica “viaggio-con-eden.html”.
+      In emergenza: <a href="tel:112">112</a>.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  const days=Array.from(document.querySelectorAll("details.day"));
+  let printState=null;
+
+  document.getElementById("open").addEventListener("click",function(){
+    days.forEach(function(day){day.open=true;});
+  });
+
+  document.getElementById("close").addEventListener("click",function(){
+    days.forEach(function(day){day.open=false;});
+  });
+
+  document.getElementById("print").addEventListener("click",function(){
+    window.print();
+  });
+
+  window.addEventListener("beforeprint",function(){
+    if(printState===null){
+      printState=days.map(function(day){return day.open;});
+    }
+    days.forEach(function(day){day.open=true;});
+  });
+
+  window.addEventListener("afterprint",function(){
+    if(printState!==null){
+      days.forEach(function(day,index){day.open=printState[index];});
+      printState=null;
+    }
+  });
+})();
+</script>
+</body>
+</html>
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    

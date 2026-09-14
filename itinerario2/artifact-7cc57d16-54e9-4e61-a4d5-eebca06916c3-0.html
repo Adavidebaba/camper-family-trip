@@ -1,0 +1,1025 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#245c55">
+<title>In camper con Eden · 15–30 settembre 2026</title>
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --paper: #fffefa;
+    --ink: #24332f;
+    --muted: #5f6f68;
+    --green: #245c55;
+    --light: #e8f1ec;
+    --gold: #f7edd4;
+    --border: #d9e1d9;
+    --red: #8e3832;
+    --shadow: 0 8px 28px rgba(35, 58, 48, .06);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+  }
+  a { color: var(--green); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  button, input, textarea { font: inherit; }
+  button {
+    border: 1px solid var(--green);
+    border-radius: 10px;
+    padding: .65rem .95rem;
+    background: var(--green);
+    color: white;
+    cursor: pointer;
+  }
+  button.secondary { background: transparent; color: var(--green); }
+  button:focus-visible, a:focus-visible, summary:focus-visible,
+  input:focus-visible, textarea:focus-visible {
+    outline: 3px solid #bd923c;
+    outline-offset: 4px;
+  }
+  .skip {
+    position: absolute;
+    left: -9999px;
+    top: 8px;
+    background: white;
+    padding: 12px;
+    z-index: 100;
+  }
+  .skip:focus { left: 8px; }
+  header {
+    color: white;
+    background: linear-gradient(130deg, #173f3a, #397669);
+    padding: 48px 20px 38px;
+  }
+  .wrap { max-width: 1100px; margin: auto; }
+  header h1 {
+    font-size: clamp(2rem, 6vw, 3.6rem);
+    line-height: 1.12;
+    margin: .3rem 0 1rem;
+  }
+  header p { max-width: 780px; }
+  .eyebrow {
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    opacity: .9;
+  }
+  .header-tags, .actions, .links, .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .header-tags span {
+    padding: 5px 11px;
+    border: 1px solid #ffffff50;
+    border-radius: 30px;
+    font-size: .9rem;
+  }
+  nav {
+    background: var(--paper);
+    border-bottom: 1px solid var(--border);
+  }
+  nav .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    padding: 14px 20px;
+  }
+  nav a { font-weight: 650; text-decoration: none; }
+  main { padding: 24px 20px 60px; }
+  section { margin: 30px 0; scroll-margin-top: 20px; }
+  h2 { font-size: 1.7rem; line-height: 1.25; margin-top: 0; }
+  h3 { line-height: 1.35; margin: 1rem 0 .5rem; }
+  h4 { margin: 1rem 0 .3rem; }
+  p { margin: .55rem 0 1rem; }
+  li { margin: .3rem 0; }
+  .card, details.day {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+  }
+  .card { padding: 22px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 16px;
+  }
+  .notice {
+    padding: 16px 18px;
+    border-left: 4px solid var(--green);
+    border-radius: 0 12px 12px 0;
+    background: var(--light);
+    margin: 16px 0;
+  }
+  .notice.warn { background: var(--gold); border-color: #a67d27; }
+  .notice.urgent { background: #faece8; border-color: var(--red); }
+  .small { font-size: .9rem; color: var(--muted); }
+  .tag {
+    display: inline-block;
+    border-radius: 30px;
+    padding: 3px 10px;
+    font-size: .8rem;
+    font-weight: 700;
+    background: var(--light);
+    color: var(--green);
+  }
+  .tag.check { background: var(--gold); color: #755514; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  caption { text-align: left; font-weight: 650; margin-bottom: 10px; }
+  th, td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: var(--light); }
+  .links { margin-top: 14px; }
+  .links a {
+    display: inline-block;
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: .9rem;
+    background: white;
+  }
+  details.day { margin: 12px 0; overflow: hidden; }
+  summary {
+    padding: 17px 20px;
+    cursor: pointer;
+    font-weight: 750;
+  }
+  summary:hover { background: #f1f5ef; }
+  summary small {
+    display: block;
+    font-weight: 450;
+    color: var(--muted);
+    margin: 4px 0 0 20px;
+  }
+  .day-body { padding: 0 20px 20px; }
+  .day-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 18px;
+  }
+  .rain {
+    padding: 14px;
+    background: #edf2f5;
+    border-radius: 10px;
+  }
+  .sleep {
+    padding-top: 10px;
+    margin-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .checklist label {
+    display: flex;
+    gap: 11px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+    cursor: pointer;
+  }
+  .checklist input { width: 20px; height: 20px; margin-top: 4px; flex-shrink: 0; }
+  .checklist input:checked + span { color: var(--muted); text-decoration: line-through; }
+  textarea, input[type="text"], input[type="tel"] {
+    width: 100%;
+    border: 1px solid #aebdb3;
+    border-radius: 9px;
+    padding: 12px;
+    background: white;
+    color: var(--ink);
+  }
+  textarea { min-height: 180px; resize: vertical; }
+  .field { display: block; margin: 14px 0; }
+  .field > span { display: block; margin-bottom: 5px; font-weight: 650; }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 20px;
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  @media (max-width: 650px) {
+    .day-grid { grid-template-columns: 1fr; }
+    .card { padding: 18px; }
+    th, td { padding: 9px; }
+    .actions button { flex-grow: 1; }
+  }
+  @media print {
+    body { background: white; font-size: 10.5pt; color: black; }
+    header { background: white; color: black; padding: 0 0 15px; }
+    header h1 { font-size: 28pt; }
+    nav, .no-print, .skip { display: none !important; }
+    main { padding: 0; }
+    section { margin: 20px 0; }
+    .card, details.day { box-shadow: none; border-color: #aaa; }
+    .grid, .day-grid { display: block; }
+    .grid .card { margin-bottom: 12px; }
+    details.day, .card { break-inside: avoid; }
+    .day-body { display: block !important; }
+    summary { list-style: none; }
+    a { color: black; }
+    .links a { border: 0; padding: 2px 5px 2px 0; }
+    textarea { min-height: 100px; }
+    .header-tags span { border-color: #aaa; }
+  }
+</style>
+</head>
+
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Il primo viaggio lento insieme</div>
+    <h1>In camper con Eden</h1>
+    <p>
+      Laghi, parchi e passeggiate facili. Un itinerario pensato per poter
+      uscire mezz’ora, fermarsi su una panchina e tornare al camper
+      senza dover organizzare ogni giornata.
+    </p>
+    <div class="header-tags">
+      <span>15–30 settembre 2026</span>
+      <span>16 giorni · 15 notti</span>
+      <span>2 adulti + Eden</span>
+      <span>5 basi</span>
+      <span>Carrozzina prima scelta</span>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="Navigazione della pagina">
+  <div class="wrap">
+    <a href="#panoramica">Anello</a>
+    <a href="#soste">Dove dormire</a>
+    <a href="#giorni">Giorno per giorno</a>
+    <a href="#eden">Con Eden</a>
+    <a href="#checklist">Checklist</a>
+    <a href="#appunti">Appunti</a>
+    <a href="#link-utili">Link utili</a>
+  </div>
+</nav>
+
+<main id="contenuto" class="wrap">
+  <div class="actions no-print">
+    <button id="printButton" type="button">Stampa / salva in PDF</button>
+    <button id="openDays" class="secondary" type="button">Apri tutti i giorni</button>
+    <button id="closeDays" class="secondary" type="button">Chiudi tutti i giorni</button>
+  </div>
+
+  <div class="notice">
+    <strong>Funziona offline.</strong>
+    Tutti i testi, la checklist e gli appunti sono contenuti in questo file.
+    Mappe, previsioni e siti esterni richiedono internet.
+    Non sono utilizzati font, immagini o librerie esterne.
+  </div>
+
+  <div class="notice warn">
+    <strong>Stato delle informazioni: proposta da completare prima della partenza.</strong>
+    Le soste sono candidate selezionate soprattutto per posizione.
+    Tariffe, accesso camper, pernottamento, servizi, aperture e autobus
+    non sono stati verificati in tempo reale.
+    I link cartografici sono ricerche, non coordinate di piazzole confermate.
+    Tempi e distanze sono indicativi.
+  </div>
+
+  <section id="panoramica">
+    <h2>L’anello</h2>
+    <div class="card">
+      <p><strong>
+        Pisa → Riva del Garda → Comano → Levico → Lazise
+        → Sarzana / Val di Magra → Pisa
+      </strong></p>
+      <p>
+        Nessuna tappa a Molveno, nessuna cabinovia e nessun trekking.
+        Rispettiamo il limite di quota indicato dalla famiglia:
+        obiettivo entro 850–900 metri, senza superare i 1.000.
+        Controllare anche le strade e le eventuali deviazioni:
+        la quota del paese non certifica l’intero tragitto.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Calendario delle basi e trasferimenti</caption>
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Base</th>
+              <th scope="col">Notti</th>
+              <th scope="col">Quota della base</th>
+              <th scope="col">Guida indicativa, senza soste</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>15–18 settembre</td><td>Riva del Garda</td><td>3</td><td>65–80 m</td><td>Da Pisa: 4h30–5h30</td></tr>
+            <tr><td>18–21 settembre</td><td>Ponte Arche / Comano</td><td>3</td><td>Circa 400 m</td><td>45–60 min</td></tr>
+            <tr><td>21–24 settembre</td><td>Lago di Levico</td><td>3</td><td>Circa 440 m; centro più alto</td><td>1h–1h30</td></tr>
+            <tr><td>24–27 settembre</td><td>Lazise</td><td>3</td><td>65–80 m</td><td>1h30–2h</td></tr>
+            <tr><td>27–30 settembre</td><td>Sarzana / Val di Magra</td><td>3</td><td>Bassa quota, secondo la sosta</td><td>3h30–4h30</td></tr>
+            <tr><td>30 settembre</td><td>Rientro a Pisa</td><td>—</td><td>—</td><td>1h–1h30 circa</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>La regola del viaggio</h3>
+      <p>
+        Una sola idea principale al giorno. Tutto il resto è facoltativo.
+        Una giornata passata fra camper, parco e colazione è una giornata riuscita.
+      </p>
+
+      <h3>Soste e notti attrezzate</h3>
+      <ul>
+        <li>Priorità a parcheggi gratuiti ben posizionati, quando adatti.</li>
+        <li>Aree camper a pagamento accettate se evitano trasferimenti.</li>
+        <li>Una notte in campeggio dopo circa 3–5 notti fuori, con flessibilità.</li>
+        <li>Un’area già dotata dei servizi necessari può rendere superfluo il passaggio in campeggio.</li>
+        <li>Le cinque basi restano le stesse anche cambiando piazzola all’interno della zona.</li>
+      </ul>
+      <p class="small">
+        Non è garantita una soluzione gratuita equivalente in ogni tappa.
+        Programmare acqua, scarichi ed energia in base all’autonomia reale,
+        non soltanto al numero di notti.
+      </p>
+    </div>
+  </section>
+
+  <section id="soste">
+    <h2>Dove dormire: posizione prima di tutto</h2>
+    <p>
+      La base ideale consente di raggiungere una passeggiata senza autobus.
+      Il trasporto pubblico resta un aiuto, non il presupposto del soggiorno:
+      orari di settembre, fermate e accesso con carrozzina vanno controllati.
+    </p>
+
+    <div class="grid">
+      <article class="card" id="sosta-riva">
+        <div class="tags">
+          <span class="tag">15–18 settembre</span>
+          <span class="tag">Carrozzina</span>
+          <span class="tag check">Da verificare</span>
+        </div>
+        <h3>Riva · zona Brione</h3>
+        <p><strong>Prima candidata:</strong> area camper Brione, zona via Brione.</p>
+        <p>
+          Posizione funzionale per il settore orientale del lungolago.
+          Indicativamente 10–20 minuti verso Pini / porto San Nicolò,
+          20–30 verso Sabbioni e 30–40 verso il centro, secondo il punto esatto.
+        </p>
+        <p>
+          <strong>Passeggiata di riferimento:</strong>
+          accesso al lago → Pini → breve tratto verso Sabbioni → ritorno.
+          Non è necessario raggiungere ogni giorno il centro.
+        </p>
+        <p>
+          <strong>Alternativa:</strong> Camping Brione, zona Sant’Alessandro.
+          Maroadi a Torbole è un’alternativa diversa, se preferite vivere Torbole.
+        </p>
+        <p><strong>Controllare:</strong> rumore, percorso pedonale, attraversamenti, servizi e posizione della piazzola.</p>
+        <p class="small">Arco non è una base equivalente per vivere Riva ogni giorno a piedi.</p>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=area+sosta+camper+Brione+Riva+del+Garda" target="_blank" rel="noopener noreferrer">Area Brione</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Camping+Brione+Riva+del+Garda" target="_blank" rel="noopener noreferrer">Camping Brione</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Camping+Maroadi+Torbole" target="_blank" rel="noopener noreferrer">Maroadi</a>
+        </div>
+      </article>
+
+      <article class="card" id="sosta-comano">
+        <div class="tags">
+          <span class="tag">18–21 settembre</span>
+          <span class="tag">Carrozzina</span>
+          <span class="tag check">Da verificare</span>
+        </div>
+        <h3>Comano · Ponte Arche</h3>
+        <p><strong>Prima candidata:</strong> area camper in zona via Lungo Sarca.</p>
+        <p>
+          Il criterio decisivo è il percorso fino a un ingresso del parco termale:
+          verificare quello reale, non la distanza in linea d’aria.
+        </p>
+        <p>
+          <strong>Passeggiata di riferimento:</strong>
+          brevi circuiti nel parco, panchine e rientro.
+        </p>
+        <p>
+          <strong>Alternativa da individuare:</strong>
+          altro parcheggio presso gli accessi del parco.
+          Non è ancora identificata una seconda sosta notturna affidabile.
+        </p>
+        <p>
+          <strong>Controllare:</strong> elettricità, acqua potabile, scarichi,
+          accesso al parco e collegamento con i servizi di Ponte Arche.
+        </p>
+        <p class="small">
+          Non usare “Camping Terme di Comano” come struttura confermata:
+          il nome comparso nella bozza precedente non è stato validato.
+          Se necessario, organizzare l’appoggio in campeggio a Riva o Levico.
+        </p>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=area+sosta+camper+Comano+Terme+via+Lungo+Sarca" target="_blank" rel="noopener noreferrer">Area camper</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=parcheggio+Parco+Terme+di+Comano+Ponte+Arche" target="_blank" rel="noopener noreferrer">Parcheggi del parco</a>
+        </div>
+      </article>
+
+      <article class="card" id="sosta-levico">
+        <div class="tags">
+          <span class="tag">21–24 settembre</span>
+          <span class="tag">Carrozzina</span>
+          <span class="tag check">Da verificare</span>
+        </div>
+        <h3>Levico · vicino al lido</h3>
+        <p><strong>Prima candidata:</strong> area camper nel settore meridionale del lago, presso gli accessi al lido.</p>
+        <p>
+          La ricerca cartografica può restituire strutture più lontane:
+          controllare l’ubicazione esatta e il percorso pedonale verso l’acqua.
+        </p>
+        <p>
+          <strong>Passeggiata di riferimento:</strong>
+          lido e verde sulla riva; primo tratto della Strada dei Pescatori
+          solo con fondo comodo.
+        </p>
+        <p><strong>Alternativa:</strong> Camping Lago di Levico.</p>
+        <p>
+          <strong>Controllare:</strong> accesso pedonale al lago, pendenze interne,
+          elettricità e possibilità di permanenza.
+        </p>
+        <p class="small">
+          Il centro e il Parco Asburgico sono più in alto.
+          Valutare un autobus locale effettivamente operativo oppure visitarli
+          durante un cambio sosta. Pergine e Borgo non sono basi equivalenti.
+        </p>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=area+sosta+camper+lago+di+Levico" target="_blank" rel="noopener noreferrer">Aree sul lago</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Camping+Lago+di+Levico" target="_blank" rel="noopener noreferrer">Camping Lago di Levico</a>
+        </div>
+      </article>
+
+      <article class="card" id="sosta-lazise">
+        <div class="tags">
+          <span class="tag">24–27 settembre</span>
+          <span class="tag">Carrozzina</span>
+          <span class="tag check">Da verificare</span>
+        </div>
+        <h3>Lazise · centro raggiungibile a piedi</h3>
+        <p><strong>Prima candidata per posizione:</strong> Parcheggio Marra, via Prà del Principe.</p>
+        <p>
+          Vicinanza al centro e al porto, orientativamente 5–15 minuti
+          secondo lo stallo. Non viene descritto come area attrezzata:
+          accesso e condizioni per il camper sono da controllare.
+        </p>
+        <p><strong>Passeggiata di riferimento:</strong> centro → porto → breve lungolago → ritorno.</p>
+        <p><strong>Alternativa:</strong> Camping du Parc, via Gardesana.</p>
+        <p>
+          <strong>Controllare:</strong> rumore del parcheggio; per il campeggio,
+          uscita pedonale, rampe e distanza effettiva dalla piazzola al paese.
+        </p>
+        <p class="small">
+          Villa dei Cedri e Colà restano escursioni facoltative,
+          non criteri per scegliere dove dormire.
+        </p>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Parcheggio+Marra+Lazise" target="_blank" rel="noopener noreferrer">Parcheggio Marra</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Camping+du+Parc+Lazise" target="_blank" rel="noopener noreferrer">Camping du Parc</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Camping+Spiaggia+d%27Oro+Lazise" target="_blank" rel="noopener noreferrer">Altra alternativa: Spiaggia d’Oro</a>
+        </div>
+      </article>
+
+      <article class="card" id="sosta-sarzana">
+        <div class="tags">
+          <span class="tag">27–30 settembre</span>
+          <span class="tag">Carrozzina</span>
+          <span class="tag check">Da verificare</span>
+        </div>
+        <h3>Sarzana · base cittadina</h3>
+        <p><strong>Prima candidata per posizione:</strong> Parcheggio di Piazza Terzi.</p>
+        <p>
+          Centro e zona della Fortezza Firmafede raggiungibili con brevi
+          passeggiate. È una soluzione urbana: non promette silenzio assoluto.
+        </p>
+        <p><strong>Alternativa:</strong> parcheggi zona Porta Parma / via San Francesco.</p>
+        <p>
+          <strong>Controllare:</strong> accessibilità per dimensioni del mezzo,
+          rumore, percorso al centro e condizioni concrete della sosta.
+        </p>
+        <p>
+          <strong>Appoggio attrezzato:</strong> Camping River, via Crociata
+          ad Ameglia, oppure Marina 3B, zona via XXV Aprile a Sarzana.
+          Non sono equivalenti a una base pedonale nel centro o a Bocca di Magra.
+        </p>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Parcheggio+Piazza+Terzi+Sarzana" target="_blank" rel="noopener noreferrer">Piazza Terzi</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=parcheggio+Porta+Parma+Sarzana" target="_blank" rel="noopener noreferrer">Porta Parma</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Camping+River+Ameglia" target="_blank" rel="noopener noreferrer">Camping River</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Marina+3B+Sarzana" target="_blank" rel="noopener noreferrer">Marina 3B</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="notice">
+      <strong>Domanda utile da fare a ogni struttura:</strong>
+      “Viaggiamo con una neonata e preferiamo la carrozzina.
+      Dalla piazzola possiamo raggiungere lago o parco senza scale,
+      tratti sulla carreggiata e salite importanti?
+      Quale piazzola è più tranquilla e vicina all’uscita pedonale?”
+    </div>
+  </section>
+
+  <section id="giorni">
+    <h2>Giorno per giorno</h2>
+    <p>
+      Le uscite sono proposte, non appuntamenti. Le durate a piedi non comprendono
+      poppate e pause. Per le giornate di guida seguire il piano di viaggio
+      concordato con il pediatra, anticipando le soste quando serve.
+    </p>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </section>
+
+  <section id="eden">
+    <h2>Viaggiare con Eden</h2>
+    <div class="notice warn">
+      <strong>Da concordare prima della partenza con il pediatra:</strong>
+      opportunità del viaggio a circa un mese, pause durante i trasferimenti,
+      eventuali condizioni individuali e limite di quota.
+      Il tetto altimetrico del programma è un vincolo della famiglia,
+      non una soglia universale di sicurezza.
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Durante la marcia</h3>
+        <ul>
+          <li>Eden deve viaggiare nel sistema di ritenuta adatto e correttamente installato su un posto omologato.</li>
+          <li>Verificare prima del noleggio compatibilità fra sedile, cinture, base e seggiolino; non basta avere ISOFIX “da qualche parte”.</li>
+          <li>Niente culla della cellula, braccio o poppata mentre il camper si muove.</li>
+          <li>Fermarsi per alimentarla, cambiarla o sistemarla; non aspettare la pausa prevista se ne ha bisogno.</li>
+          <li>La durata dei blocchi di guida non è un obiettivo da raggiungere: le stime stradali non sono indicazioni pediatriche.</li>
+          <li>All’arrivo, non usare abitualmente l’ovetto come letto.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Sonno e temperatura</h3>
+        <ul>
+          <li>Organizzare una superficie di sonno piana, rigida, libera e adatta alla sua età.</li>
+          <li>Per il sonno, posizione supina; evitare cuscini, paracolpi e oggetti morbidi intorno al viso.</li>
+          <li>Non improvvisare il letto sul divanetto o sul letto adulti del camper.</li>
+          <li>Vestire a strati e controllare che non si surriscaldi.</li>
+          <li>Non coprire la carrozzina con teli che ostacolano ventilazione e controllo visivo.</li>
+          <li>Seguire le istruzioni di carrozzina, navicella e accessori; non tutte le navicelle sono adatte al sonno prolungato.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Carrozzina e marsupio</h3>
+        <p><strong>Carrozzina in tutte le passeggiate principali.</strong></p>
+        <ul>
+          <li>Preferire ritorni sullo stesso percorso: potete accorciare in qualunque momento.</li>
+          <li>Dopo la pioggia controllare ghiaia, fango e radici.</li>
+          <li>Il marsupio è facoltativo, non necessario per “completare” un itinerario.</li>
+          <li>Se usato: supporto adatto a età e peso, viso sempre visibile, vie aeree libere e mento non schiacciato sul torace.</li>
+          <li>Per prematurità o altre condizioni particolari chiedere consiglio al pediatra anche sul babywearing.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Terme, visite e alimentazione</h3>
+        <ul>
+          <li>Un parco termale non implica l’idoneità delle vasche per una neonata.</li>
+          <li>Nessun bagno termale per Eden è incluso senza indicazione pediatrica e conferma della struttura.</li>
+          <li>Per la mamma, valutare bagni e trattamenti rispetto al recupero post parto.</li>
+          <li>In fattoria privilegiare spazi aperti, igiene delle mani e distanza da animali e superfici sporche.</li>
+          <li>Portare quanto serve per il metodo di alimentazione abituale, senza improvvisare preparazione o conservazione nel camper.</li>
+          <li>Per Eden niente assaggi di miele o prodotti agricoli: l’esperienza gastronomica è per gli adulti.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Il camper come base sicura</h3>
+        <ul>
+          <li>Controllare tipo di riscaldamento, autonomia e istruzioni del noleggiatore.</li>
+          <li>La colonnina 230 V non implica che il riscaldamento funzioni elettricamente.</li>
+          <li>Non usare fornelli, barbecue o apparecchi non idonei per scaldare la cellula.</li>
+          <li>Non ostruire le ventilazioni previste; verificare i rilevatori presenti.</li>
+          <li>Con pioggia forte evitare terreni fangosi, avvallamenti e soste esposte vicino ai corsi d’acqua.</li>
+          <li>Se una sosta è rumorosa o scomoda, cambiarla è una buona decisione, non un fallimento.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Quando chiedere aiuto</h3>
+        <div class="notice urgent">
+          <strong>Con una bimba sotto i tre mesi, temperatura di 38 °C o più
+          richiede valutazione medica tempestiva.</strong>
+        </div>
+        <p>
+          Chiedere assistenza anche in caso di marcata difficoltà ad alimentarsi,
+          riduzione importante dei pannolini bagnati o sonnolenza insolita.
+          Per difficoltà respiratoria, colorito bluastro, scarsa reattività
+          o altra emergenza chiamare <a href="tel:112"><strong>112</strong></a>.
+        </p>
+        <p class="small">
+          Queste indicazioni non sostituiscono il pediatra.
+          Prima del viaggio salvare i contatti e individuare con lui
+          i riferimenti sanitari lungo il percorso.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="pioggia">
+    <h2>Il piano pioggia, senza complicare il viaggio</h2>
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Situazione</th>
+              <th scope="col">Scelta consigliata</th>
+              <th scope="col">Da evitare</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pioggia debole e intermittente</td>
+              <td>Uscite brevi vicino alla sosta, locale al coperto, ritorno rapido.</td>
+              <td>Percorsi lunghi che obbligano a rientrare sotto la pioggia.</td>
+            </tr>
+            <tr>
+              <td>Pioggia continua</td>
+              <td>Riposo, servizi del camper, eventuale visita interna verificata.</td>
+              <td>Spostamenti lunghi solo per riempire la giornata.</td>
+            </tr>
+            <tr>
+              <td>Vento forte sul Garda</td>
+              <td>Tratto urbano riparato o giornata ferma.</td>
+              <td>Lungolago esposto e soste sotto alberi con allerta vento.</td>
+            </tr>
+            <tr>
+              <td>Allerta meteo o temporali intensi</td>
+              <td>Consultare bollettini ufficiali e spostarsi in una base sicura se necessario.</td>
+              <td>Foci, rive vulnerabili, avvallamenti e aree potenzialmente allagabili.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small">
+        Le alternative al coperto non sono già confermate accessibili.
+        Chiedere sempre informazioni prima di partire dalla sosta.
+      </p>
+    </div>
+  </section>
+
+  <section id="checklist">
+    <h2>Checklist prima di partire</h2>
+    <p class="small">
+      Le spunte vengono salvate localmente, se il browser lo consente.
+      Non vengono inviate online e non si sincronizzano fra dispositivi.
+    </p>
+    <div class="grid">
+      <div class="card checklist">
+        <h3>Eden e salute</h3>
+        <label><input type="checkbox" data-save="pediatra"><span>Confronto con il pediatra su viaggio, pause e quota.</span></label>
+        <label><input type="checkbox" data-save="documenti"><span>Tessera sanitaria, documenti e informazioni cliniche utili.</span></label>
+        <label><input type="checkbox" data-save="sonno"><span>Sistemazione sicura per il sonno nel camper.</span></label>
+        <label><input type="checkbox" data-save="seggiolino"><span>Seggiolino compatibile e installazione controllata.</span></label>
+        <label><input type="checkbox" data-save="termometro"><span>Termometro e materiale concordato con il pediatra.</span></label>
+        <label><input type="checkbox" data-save="borsa"><span>Borsa pronta per pause, cambio e alimentazione.</span></label>
+        <label><input type="checkbox" data-save="carrozzina"><span>Carrozzina controllata, accessori adatti e marsupio facoltativo.</span></label>
+      </div>
+
+      <div class="card checklist">
+        <h3>Camper e soste</h3>
+        <label><input type="checkbox" data-save="dimensioni"><span>Annotate altezza, larghezza, lunghezza e massa del camper.</span></label>
+        <label><input type="checkbox" data-save="quote"><span>Controllati percorsi stradali e quote, comprese le deviazioni.</span></label>
+        <label><input type="checkbox" data-save="prima-sosta"><span>Prima sosta e alternativa individuate con indirizzo esatto.</span></label>
+        <label><input type="checkbox" data-save="servizi"><span>Verificati carico, scarico, acqua potabile e corrente.</span></label>
+        <label><input type="checkbox" data-save="riscaldamento"><span>Provato il riscaldamento e capite autonomia e ventilazione.</span></label>
+        <label><input type="checkbox" data-save="gas"><span>Controllati gas, batteria, rilevatori e istruzioni del noleggiatore.</span></label>
+        <label><input type="checkbox" data-save="offline"><span>Scaricate mappe offline; salvati indirizzi e contatti.</span></label>
+        <label><input type="checkbox" data-save="meteo"><span>Controllati meteo e allerte prima della partenza.</span></label>
+        <label><input type="checkbox" data-save="restituzione"><span>Annotati orario e condizioni di riconsegna.</span></label>
+      </div>
+    </div>
+    <p id="checkProgress" class="small" aria-live="polite"></p>
+  </section>
+
+  <section id="appunti">
+    <h2>I vostri riferimenti e appunti</h2>
+    <div class="card">
+      <div class="grid">
+        <label class="field">
+          <span>Pediatra / contatto concordato</span>
+          <input type="text" data-save="contatto-pediatra" placeholder="Nome e numero">
+        </label>
+        <label class="field">
+          <span>Noleggiatore / assistenza</span>
+          <input type="text" data-save="contatto-noleggio" placeholder="Numero e riferimento contratto">
+        </label>
+        <label class="field">
+          <span>Dimensioni del camper</span>
+          <input type="text" data-save="misure" placeholder="Altezza · larghezza · lunghezza · massa">
+        </label>
+        <label class="field">
+          <span>Riconsegna del 30 settembre</span>
+          <input type="text" data-save="riconsegna" placeholder="Indirizzo e orario">
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Soste confermate, indirizzi, coordinate e servizi</span>
+        <textarea data-save="soste-confermate" placeholder="Riva:
+Comano:
+Levico:
+Lazise:
+Sarzana:
+Punti pausa:
+Camper service:"></textarea>
+      </label>
+
+      <label class="field">
+        <span>Appunti liberi</span>
+        <textarea data-save="note-libere" placeholder="Il posto della colazione, una piazzola tranquilla, una passeggiata da ripetere…"></textarea>
+      </label>
+
+      <p class="small" id="saveStatus" aria-live="polite">
+        Gli appunti restano nel browser di questo dispositivo, quando il salvataggio locale è disponibile.
+      </p>
+      <div class="actions no-print">
+        <button type="button" id="exportNotes">Scarica backup degli appunti</button>
+      </div>
+      <p class="small">
+        Il salvataggio locale può non funzionare in alcuni browser aprendo un file HTML,
+        oppure essere cancellato in navigazione privata o pulendo i dati.
+        Il backup scaricato è un file di testo, non cifrato: custodirlo se contiene dati personali.
+        Copiare il solo HTML su un altro dispositivo non trasferisce gli appunti.
+      </p>
+    </div>
+  </section>
+
+  <section id="link-utili">
+    <h2>Link utili · richiedono connessione</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Trasporti e destinazioni</h3>
+        <ul>
+          <li><a href="https://www.gardatrentino.it/" target="_blank" rel="noopener noreferrer">Garda Trentino</a> — informazioni territoriali e contatti turistici.</li>
+          <li><a href="https://www.visitvalsugana.it/" target="_blank" rel="noopener noreferrer">Visit Valsugana</a> — Levico e territorio.</li>
+          <li><a href="https://www.trentinotrasporti.it/" target="_blank" rel="noopener noreferrer">Trentino Trasporti</a> — corse e orari da controllare per settembre.</li>
+          <li><a href="https://www.atv.verona.it/" target="_blank" rel="noopener noreferrer">ATV Verona</a> — collegamenti nell’area veronese del Garda.</li>
+          <li><a href="https://www.atcesercizio.it/" target="_blank" rel="noopener noreferrer">ATC Esercizio</a> — trasporti nell’area spezzina e Sarzana.</li>
+        </ul>
+        <p class="small">
+          Prima di usare un autobus chiedere se la carrozzina può restare aperta,
+          come funziona l’accesso e quanto distano le fermate.
+          Non sono state inserite linee o frequenze non verificate.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Meteo e strada</h3>
+        <ul>
+          <li><a href="https://www.meteotrentino.it/" target="_blank" rel="noopener noreferrer">Meteotrentino</a></li>
+          <li><a href="https://www.arpa.veneto.it/" target="_blank" rel="noopener noreferrer">ARPAV</a> — meteo Veneto.</li>
+          <li><a href="https://allertaliguria.regione.liguria.it/" target="_blank" rel="noopener noreferrer">Allerta Liguria</a></li>
+          <li><a href="https://www.autostrade.it/" target="_blank" rel="noopener noreferrer">Autostrade per l’Italia</a></li>
+          <li><a href="https://www.autobrennero.it/" target="_blank" rel="noopener noreferrer">Autostrada del Brennero</a></li>
+          <li><a href="https://www.salt.it/" target="_blank" rel="noopener noreferrer">SALT</a> — informazioni sulla rete di competenza.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Gastronomia e visite: solo se comode</h3>
+        <p class="small">
+          Nomi emersi nella progettazione, non selezione verificata di aperture,
+          certificazioni biologiche o accessibilità.
+          Chiedere prima di organizzare un trasferimento.
+        </p>
+        <ul>
+          <li>Riva / Arco: Madonna delle Vittorie; Maso Bòtes.</li>
+          <li>Valle dei Laghi: Castel Toblino; Fratelli Pisoni.</li>
+          <li>Levico: Pasticceria Milano; Boivin.</li>
+          <li>Lazise: Le Tese; La Pesenata.</li>
+          <li>Riva con pioggia: MAG, sede della Rocca, previa verifica.</li>
+          <li>Sarzana con pioggia: eventuale visita interna alla Firmafede, previa verifica.</li>
+        </ul>
+        <p><strong>Una buona colazione vicino al camper vale più di una lunga deviazione.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="notice">
+    <strong>Promemoria finale:</strong>
+    non dovete vedere tutto. Il programma migliore è quello che vi lascia
+    scegliere ogni mattina come state, cosa desiderate e quanto lontano
+    avete voglia di andare insieme a Eden.
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      Viaggio in camper · 15–30 settembre 2026 · Versione offline di pianificazione.
+      Nessuna prenotazione effettuata. Condizioni locali e informazioni operative
+      da verificare prima dell’utilizzo.
+    </p>
+    <p>Emergenze: <a href="tel:112">112</a>. Le indicazioni sanitarie non sostituiscono il pediatra.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  const prefix = "eden-camper-2026-";
+  const fields = Array.from(document.querySelectorAll("[data-save]"));
+  const days = Array.from(document.querySelectorAll("details.day"));
+  const saveStatus = document.getElementById("saveStatus");
+  const progress = document.getElementById("checkProgress");
+  let storageAvailable = true;
+
+  try {
+    localStorage.setItem(prefix + "test", "1");
+    localStorage.removeItem(prefix + "test");
+  } catch (error) {
+    storageAvailable = false;
+  }
+
+  function updateProgress() {
+    const checks = fields.filter(field => field.type === "checkbox");
+    const complete = checks.filter(field => field.checked).length;
+    progress.textContent = complete + " di " + checks.length + " controlli completati.";
+  }
+
+  function setStatus() {
+    saveStatus.textContent = storageAvailable
+      ? "Salvataggio locale attivo. Per sicurezza, scaricate un backup degli appunti."
+      : "Il browser non consente il salvataggio locale. Prima di chiudere, scaricate il backup degli appunti.";
+  }
+
+  fields.forEach(function (field) {
+    const key = prefix + field.dataset.save;
+
+    if (storageAvailable) {
+      try {
+        const stored = localStorage.getItem(key);
+        if (stored !== null) {
+          if (field.type === "checkbox") {
+            field.checked = stored === "true";
+          } else {
+            field.value = stored;
+          }
+        }
+      } catch (error) {
+        storageAvailable = false;
+      }
+    }
+
+    function saveField() {
+      if (storageAvailable) {
+        try {
+          const value = field.type === "checkbox"
+            ? String(field.checked)
+            : field.value;
+          localStorage.setItem(key, value);
+        } catch (error) {
+          storageAvailable = false;
+        }
+      }
+      updateProgress();
+      setStatus();
+    }
+
+    field.addEventListener(
+      field.type === "checkbox" ? "change" : "input",
+      saveField
+    );
+  });
+
+  document.getElementById("openDays").addEventListener("click", function () {
+    days.forEach(day => { day.open = true; });
+  });
+
+  document.getElementById("closeDays").addEventListener("click", function () {
+    days.forEach(day => { day.open = false; });
+  });
+
+  document.getElementById("printButton").addEventListener("click", function () {
+    window.print();
+  });
+
+  let printState = null;
+
+  window.addEventListener("beforeprint", function () {
+    if (printState === null) {
+      printState = days.map(day => day.open);
+    }
+    days.forEach(day => { day.open = true; });
+  });
+
+  window.addEventListener("afterprint", function () {
+    if (printState !== null) {
+      days.forEach((day, index) => { day.open = printState[index]; });
+      printState = null;
+    }
+  });
+
+  document.getElementById("exportNotes").addEventListener("click", function () {
+    const lines = [
+      "IN CAMPER CON EDEN",
+      "15–30 settembre 2026",
+      "Backup di appunti e checklist",
+      ""
+    ];
+
+    fields.forEach(function (field) {
+      const label = field.closest("label");
+      const title = label
+        ? label.innerText.trim()
+        : field.dataset.save;
+
+      if (field.type === "checkbox") {
+        lines.push((field.checked ? "[x] " : "[ ] ") + title);
+      } else {
+        lines.push("", title, field.value || "(non compilato)");
+      }
+    });
+
+    const blob = new Blob(
+      ["\uFEFF" + lines.join("\n")],
+      { type: "text/plain;charset=utf-8" }
+    );
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "appunti-viaggio-eden-2026.txt";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  });
+
+  updateProgress();
+  setStatus();
+})();
+</script>
+</body>
+</html>
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    

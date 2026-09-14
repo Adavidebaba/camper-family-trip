@@ -1,0 +1,139 @@
+/* ==========================================================================
+   EDEN COMPONENTS - PROPOSTE MATTINA/POMERIGGIO, PIANO PIOGGIA & TOUR SWITCHER
+   ========================================================================== */
+
+/* Due Possibilità al Giorno (Mattina & Pomeriggio) */
+.halves-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.half-box {
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  border: 1px solid var(--color-card-border);
+}
+
+.half-box.morning {
+  background: linear-gradient(135deg, #fffaf2, #fffdf8);
+  border-left: 4px solid var(--color-terracotta-500);
+}
+
+.half-box.afternoon {
+  background: linear-gradient(135deg, #f4faf6, #fbfdfc);
+  border-left: 4px solid var(--color-sage-600);
+}
+
+.half-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-sage-900);
+  margin-bottom: 6px;
+}
+
+.half-desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  margin-bottom: 6px;
+}
+
+.half-time {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--color-text-light);
+}
+
+/* Piano Pioggia Alternativo */
+.rain-plan-box {
+  background: linear-gradient(145deg, #f0f6fa, #f7fafc);
+  border: 1.5px dashed var(--color-lake-600);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-bottom: 20px;
+}
+
+.rain-plan-header {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--color-lake-800);
+  margin-bottom: 6px;
+}
+
+.rain-plan-body {
+  font-size: 13px;
+  color: var(--color-lake-900);
+}
+
+.rain-plan-notes {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 5px;
+}
+
+/* Badge Altitudine & Base */
+.badge-altitude-safe {
+  background: #e8f5e9;
+  color: #1b5e20;
+  border: 1px solid #c8e6c9;
+}
+
+.badge-altitude-warn {
+  background: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffe0b2;
+}
+
+.badge-base-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--color-lake-50);
+  color: var(--color-lake-800);
+  border: 1px solid var(--color-lake-100);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+/* Switcher Rapido tra le due Guide */
+.tour-switcher-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.tour-switcher-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.tour-switcher-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  color: var(--color-sage-900);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.tour-switcher-btn:hover {
+  background: var(--color-sage-100);
+  transform: translateY(-1px);
+}
