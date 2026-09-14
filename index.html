@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Guida Camper Family: Toscana, Marche, Umbria e Tuscia (15-29 Set)</title>
+  <meta name="description" content="Guida completa di viaggio in camper con neonata: itinerario 15-29 Settembre, tappe baby-friendly, mobilità carrozzina e marsupio, aree sosta 220V e mappa interattiva.">
+  <meta name="theme-color" content="#193329">
+
+  <!-- Typography: Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Fogli di Stile Modulari -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- Header & Hero -->
+    <header class="app-header">
+      <div class="hero-banner">
+        <div class="hero-top-tag">🚐 Family Road Trip • Settembre 2026</div>
+        <h1 class="hero-title">In Camper con Bimba & Mamma</h1>
+        <p class="hero-subtitle">
+          Guida pratica e completa dal 15 al 29 Settembre: orari rilassati post-poppata, itinerari carrozzina & marsupio, aree sosta sicure con allaccio 220V e sapori autentici.
+        </p>
+        
+        <!-- Strip Statistiche -->
+        <div class="stats-strip">
+          <div class="stat-item">
+            <span class="stat-label">Durata</span>
+            <span class="stat-value">15 Giorni</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Periodo</span>
+            <span class="stat-value">15 - 29 Set</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Percorso Totale</span>
+            <span class="stat-value">~885 km</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Soste Notte</span>
+            <span class="stat-value">100% 220V</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigatore a Scorrimento Orizzontale Giorni (Mobile Friendly) -->
+    <nav class="day-slider-section" aria-label="Selettore Tappe Giornaliere">
+      <div class="day-slider-header">
+        <span class="day-slider-title">📅 Scegli la Tappa</span>
+        <div style="display: flex; gap: 6px;">
+          <button id="prevDayBtn" class="day-slider-nav-btn" aria-label="Tappa Precedente">◀ Prec</button>
+          <button id="nextDayBtn" class="day-slider-nav-btn" aria-label="Tappa Successiva">Succ ▶</button>
+        </div>
+      </div>
+      <div class="days-track" id="daysTrack" role="tablist">
+        <!-- Generato dinamicamente via JS -->
+      </div>
+    </nav>
+
+    <!-- Layout Principale: Scheda Dettaglio Giorno + Mappa Interattiva -->
+    <main class="main-content-layout">
+      <!-- Scheda Dettaglio Giornata Selezionata -->
+      <section id="dayDetailContainer" aria-live="polite">
+        <!-- Renderizzato da DayViewModel.js -->
+      </section>
+
+      <!-- Pannello Mappa Interattiva -->
+      <aside class="map-sticky-container">
+        <div class="map-panel">
+          <div class="map-header">
+            <h3 class="map-title">🗺️ Mappa Itinerario & Tappe</h3>
+            <span class="map-hint">Tocca un numero per aprire la tappa</span>
+          </div>
+          <div id="leafletMap"></div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Script Modulare Applicativo -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

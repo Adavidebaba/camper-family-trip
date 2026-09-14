@@ -1,0 +1,378 @@
+/* ==========================================================================
+   COMPONENTS - DAY DETAILS, TIMELINE, CARDS, BADGES & MAP
+   ========================================================================== */
+
+/* Main Day Detail Card */
+.day-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  transition: opacity 0.25s ease;
+}
+
+/* Header del Giorno Attivo */
+.day-header-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.day-badge-date {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  background: var(--color-sage-100);
+  color: var(--color-sage-800);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+}
+
+.day-title-main {
+  font-size: clamp(20px, 3.2vw, 26px);
+  color: var(--color-sage-900);
+  margin-bottom: 6px;
+}
+
+.day-route-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 18px;
+}
+
+.route-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  color: var(--color-terracotta-700);
+}
+
+/* Badge Mobilità Bimbo */
+.mobility-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.badge-carrozzina {
+  background: var(--badge-carrozzina-bg);
+  color: var(--badge-carrozzina-txt);
+  border-color: var(--badge-carrozzina-border);
+}
+
+.badge-marsupio {
+  background: var(--badge-marsupio-bg);
+  color: var(--badge-marsupio-txt);
+  border-color: var(--badge-marsupio-border);
+}
+
+.badge-marsupio-strict {
+  background: var(--badge-marsupio-strict-bg);
+  color: var(--badge-marsupio-strict-txt);
+  border-color: var(--badge-marsupio-strict-border);
+  animation: pulse-soft 2s infinite ease-in-out;
+}
+
+.badge-ovetto {
+  background: var(--badge-ovetto-bg);
+  color: var(--badge-ovetto-txt);
+  border-color: var(--badge-ovetto-border);
+}
+
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.day-summary-box {
+  background: var(--color-sage-50);
+  border-left: 4px solid var(--color-sage-600);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--color-sage-900);
+  margin-bottom: 22px;
+  font-style: italic;
+}
+
+/* Pulsanti Navigazione Rapida GPS */
+.nav-actions-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.btn-nav-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.btn-google-maps {
+  background: #ffffff;
+  color: #1a73e8;
+  border: 1.5px solid #1a73e8;
+}
+
+.btn-google-maps:hover {
+  background: #e8f0fe;
+  transform: translateY(-1px);
+}
+
+.btn-waze {
+  background: #ffffff;
+  color: #00d2ff;
+  border: 1.5px solid #33ccff;
+}
+
+.btn-waze:hover {
+  background: #e6faff;
+  transform: translateY(-1px);
+}
+
+/* Sezioni a Schede Interne */
+.section-block {
+  margin-bottom: 24px;
+}
+
+.section-block-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-sage-900);
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--color-card-border);
+  padding-bottom: 6px;
+}
+
+/* Timeline Oraria Baby-Friendly */
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--color-sage-300);
+}
+
+.timeline-item {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-terracotta-500);
+  border: 2px solid #ffffff;
+}
+
+.timeline-item-time {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--color-terracotta-700);
+  margin-bottom: 2px;
+}
+
+.timeline-item-act {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.timeline-item-note {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 3px;
+}
+
+/* Card Sosta Camper con 220V */
+.camper-card {
+  background: linear-gradient(145deg, #ffffff, var(--color-lake-50));
+  border: 1.5px solid var(--color-lake-100);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  position: relative;
+}
+
+.camper-220v-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+}
+
+.camper-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-lake-900);
+  margin-bottom: 6px;
+}
+
+.camper-services {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.camper-notes {
+  font-size: 12px;
+  color: var(--color-lake-800);
+  font-style: italic;
+}
+
+/* Griglia Mini-Card Informative */
+.info-subgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+
+.info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-sage-800);
+  margin-bottom: 8px;
+}
+
+.info-card-body {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.medical-alert {
+  border-left: 3.5px solid #d93025;
+  background: #fff8f8;
+}
+
+.medical-alert .info-card-header {
+  color: #c5221f;
+}
+
+.food-card {
+  border-left: 3.5px solid var(--color-terracotta-500);
+  background: #fffaf8;
+}
+
+.food-card .info-card-header {
+  color: var(--color-terracotta-700);
+}
+
+/* Mappa Interattiva Leaflet */
+.map-panel {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-md);
+}
+
+.map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.map-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-sage-900);
+}
+
+.map-hint {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+#leafletMap {
+  width: 100%;
+  height: 480px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-card-border);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.04);
+}
+
+/* Custom Marker Leaflet */
+.custom-pin {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-sage-800);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  border: 2.5px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.custom-pin.active-pin {
+  background: var(--color-terracotta-500);
+  transform: scale(1.25);
+  box-shadow: 0 6px 14px rgba(214, 100, 62, 0.45);
+  border-color: #ffffff;
+}

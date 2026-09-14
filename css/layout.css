@@ -1,0 +1,249 @@
+/* ==========================================================================
+   LAYOUT DESIGN - HEADER, HERO STATS, SLIDER & GRID
+   ========================================================================== */
+
+.app-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 60px 16px;
+}
+
+/* Header & Hero */
+.app-header {
+  padding: 24px 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, var(--color-sage-900) 0%, var(--color-lake-900) 100%);
+  color: #ffffff;
+  padding: 24px 20px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(214, 100, 62, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-top-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #e2ede7;
+}
+
+.hero-title {
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.hero-subtitle {
+  font-size: clamp(13px, 2.5vw, 15px);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 650px;
+  margin-bottom: 18px;
+}
+
+/* Statistiche di Viaggio */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Day Slider - Navigatore Orizzontale a Scorrimento Rapido */
+.day-slider-section {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(249, 250, 248, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 12px 0;
+  margin: 0 -16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+.day-slider-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.day-slider-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-sage-800);
+  letter-spacing: 0.5px;
+}
+
+.day-slider-nav-btn {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-sage-800);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.day-slider-nav-btn:hover {
+  background: var(--color-sage-100);
+}
+
+.days-track {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 2px 10px 2px;
+  scrollbar-width: thin;
+}
+
+.days-track::-webkit-scrollbar {
+  height: 4px;
+}
+
+.days-track::-webkit-scrollbar-thumb {
+  background: var(--color-sage-300);
+  border-radius: 4px;
+}
+
+/* Day Pill Card nello slider */
+.day-pill {
+  flex: 0 0 110px;
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-card-border);
+  border-radius: var(--radius-md);
+  padding: 10px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+  user-select: none;
+}
+
+.day-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-sage-600);
+  box-shadow: var(--shadow-md);
+}
+
+.day-pill.active {
+  background: linear-gradient(145deg, var(--color-sage-800), var(--color-sage-900));
+  border-color: var(--color-sage-800);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(38, 74, 60, 0.25);
+  transform: translateY(-2px);
+}
+
+.day-pill .pill-date {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+.day-pill.active .pill-date {
+  color: #ffffff;
+}
+
+.day-pill .pill-stage {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+
+.day-pill.active .pill-stage {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.day-pill .pill-mobility {
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 6px;
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-sage-50);
+}
+
+.day-pill.active .pill-mobility {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Griglia Principale Dettagli & Mappa */
+.main-content-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+@media (min-width: 960px) {
+  .main-content-layout {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: start;
+  }
+
+  .map-sticky-container {
+    position: sticky;
+    top: 105px;
+  }
+}
