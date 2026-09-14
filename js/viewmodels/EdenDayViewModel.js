@@ -68,18 +68,21 @@ export class EdenDayViewModel {
         <!-- Piano Pioggia Dedicato -->
         ${this.buildRainPlanSection(day.rainPlan)}
 
+        <!-- Opzione Extra Molveno (se presente) -->
+        ${this.buildMolvenoCard(day.molvenoOption)}
+
         <!-- Programma Orario & Ritmi Poppate -->
         ${this.buildScheduleSection(day.schedule)}
 
-        <!-- Sosta Notte Camper 220V -->
-        ${this.buildCamperSection(day.camperStop)}
+        <!-- Sosta Notte Camper 220V & Alternative Gratuite -->
+        ${this.buildCamperSection(day.camperStop, day.freeCamperAlternatives)}
 
         <!-- Griglia Dettagli Passeggiate, Focus Eden, Medico ed Enogastronomia -->
         <div class="info-subgrid">
           ${this.buildWalkCard(day.walkDetails)}
           ${this.buildBabyCard(day.babyTips)}
           ${this.buildMedicalCard(day.medicalNearby)}
-          ${this.buildGastronomyCard(day.gastronomy)}
+          ${this.buildGastronomyCard(day.gastronomy, day.specialSpots)}
         </div>
       </article>
     `;
@@ -153,18 +156,65 @@ export class EdenDayViewModel {
   }
 
   /**
-   * Scheda Sosta Camper 220V
+   * Scheda Sosta Camper 220V & Alternative Gratuite con note
    */
-  buildCamperSection(camper) {
+  buildCamperSection(camper, freeAlternatives) {
     if (!camper || !camper.name) return '';
+
+    let altHtml = '';
+    if (freeAlternatives && freeAlternatives.length > 0) {
+      const cards = freeAlternatives.map(alt => `
+        <div class="camper-alt-card">
+          <div class="camper-alt-name">
+            <span>🅿️ ${alt.name}</span>
+            <span style="font-size:11px; color:#b05a00; font-weight:bold;">${alt.rating ? '⭐ ' + alt.rating : 'Gratuito'}</span>
+          </div>
+          <div class="camper-alt-services">📍 ${alt.location} • <strong>Servizi:</strong> ${alt.services}</div>
+          <div class="why-omitted-note">
+            ⚠️ <strong>Perché considerata secondaria:</strong> ${alt.whyOmittedNote}
+          </div>
+        </div>
+      `).join('');
+
+      altHtml = `
+        <div class="camper-alt-section">
+          <div class="camper-alt-title">🅿️ Alternative Gratuite (con note sulla posizione)</div>
+          ${cards}
+        </div>
+      `;
+    }
+
     return `
       <div class="section-block">
-        <h3 class="section-block-title">🚐 Sosta Notte Camper & Servizi</h3>
+        <h3 class="section-block-title">🚐 Sosta Notte Camper Primaria & Servizi</h3>
         <div class="camper-card">
-          <div class="camper-220v-tag">⚡ Allaccio 220V Disponibile</div>
+          <div class="camper-220v-tag">⚡ Allaccio 220V Disponibile • Accesso Pedonale Diretto</div>
           <div class="camper-name">${camper.name}</div>
           <div class="camper-services"><strong>Servizi:</strong> ${camper.services}</div>
-          <div class="camper-notes"><strong>Info Notte:</strong> ${camper.notes}</div>
+          <div class="camper-notes"><strong>Info Notte & Posizione:</strong> ${camper.notes}</div>
+        </div>
+        ${altHtml}
+      </div>
+    `;
+  }
+
+  /**
+   * Card Opzione Extra Molveno & Dolomiti di Brenta
+   */
+  buildMolvenoCard(molveno) {
+    if (!molveno) return '';
+    return `
+      <div class="molveno-extra-card">
+        <div class="molveno-header">
+          <span>🏔️ Opzione Extra: Lago di Molveno & Dolomiti di Brenta (864 m)</span>
+        </div>
+        <div class="molveno-why-omitted">
+          ⚠️ <strong>Perché era omessa nell'anello principale:</strong> ${molveno.whyOmittedNote}
+        </div>
+        <div style="font-size: 13px; color: var(--color-lake-900); line-height: 1.5;">
+          <p><strong>Cosa vedere:</strong> ${molveno.description}</p>
+          <p style="margin-top:4px;"><strong>Pasticceria & Sapori:</strong> ${molveno.foodSpot}</p>
+          <p style="margin-top:4px;"><strong>Sosta Camper:</strong> ${molveno.camperSpot}</p>
         </div>
       </div>
     `;
@@ -213,17 +263,30 @@ export class EdenDayViewModel {
     `;
   }
 
-  buildGastronomyCard(food) {
+  buildGastronomyCard(food, specialSpots) {
     if (!food || !food.dishes) return '';
     const dishesList = food.dishes.join(', ');
+
+    let specialListHtml = '';
+    if (specialSpots && specialSpots.length > 0) {
+      const items = specialSpots.map(s => `
+        <div class="special-spot-item">
+          <strong>${s.type}:</strong> ${s.name} (${s.location}) — <em>${s.description}</em>
+        </div>
+      `).join('');
+      specialListHtml = `<div class="special-spots-list">${items}</div>`;
+    }
+
     return `
       <div class="info-card food-card">
-        <div class="info-card-header">🍷 Sapori Locali & Ristoro</div>
+        <div class="info-card-header">🍷 Sapori Locali & Pasticcerie</div>
         <div class="info-card-body">
           <p><strong>Da assaggiare:</strong> ${dishesList}</p>
           <p><strong>Consiglio comodo:</strong> ${food.recommendedSpots}</p>
+          ${specialListHtml}
         </div>
       </div>
     `;
   }
 }
+

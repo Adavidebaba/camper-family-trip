@@ -65,6 +65,12 @@ export const EDEN_PART_2 = [
     gastronomy: {
       dishes: ['Formaggi della Giudicarie a latte crudo', 'Miele di montagna millefiori'],
       recommendedSpots: 'Caseificio Sociale di Fiavé (punto vendita con burro artigianale e formaggi)'
+    },
+    molvenoOption: {
+      description: "Lago alpino a 864 m di quota con acque turchesi e 12 ettari di prato all'inglese continuo sul lungolago lastricato e privo di dislivelli.",
+      foodSpot: "Panificio Pasticceria PANDOP (strudel con pasta tirata a mano e crostate ai piccoli frutti) ed El Filò (cucina alpina tradizionale).",
+      camperSpot: "Area Sosta Camper Lago Di Molveno (a 50m dalla riva, 220V) oppure soste gratuite a Castel Belfort e Belpark Parco Faunistico Spormaggiore (a 15 min).",
+      whyOmittedNote: "Esclusa dall'anello principale per due ragioni: (1) l'escursione classica a Malga Tovre prevede la risalita in cabinovia sull'altopiano di Pradel (1.367 m), sconsigliata a un neonato di un mese per la rapida variazione di pressione barometrica; (2) la quota (864 m) tocca il limite superiore concordato per la famiglia. Se desiderate visitarla come deviazione di mezza giornata, limitarsi esclusivamente alla passeggiata pianeggiante lungolago senza salire in cabinovia."
     }
   },
   {
@@ -116,6 +122,10 @@ export const EDEN_PART_2 = [
       services: 'Allaccio 220V, camper service completo, docce, accesso immediato al lido',
       notes: 'Base magnifica: permette di vivere il lago a piedi ogni giorno. Alternativa: Camping Lago di Levico.'
     },
+    freeCamperAlternatives: [
+      { name: "Area Sosta Camper Gratuita Pergine", location: "Via S. Pietro, Pergine Valsugana", rating: "4.5 / 5", services: "Punto sosta comunale gratuito a 3 km dal Lago di Caldonazzo e 10 min da Levico", whyOmittedNote: "Dista circa 10 km dal Lago di Levico e dal Parco Asburgico; richiede l'uso quotidiano del camper per ogni spostamento verso le passeggiate." },
+      { name: "Area Sosta Camper Borgo Valsugana", location: "Via Temanza, Borgo Valsugana", rating: "4.0 / 5", services: "Area comunale gratuita con camper service lungo la pista ciclabile della Valsugana", whyOmittedNote: "Dista oltre 15 km da Levico. Ottima per cicloturismo, ma troppo distante per vivere Levico e il lido a piedi con la carrozzina." }
+    ],
     babyTips: {
       feedingSpots: 'Prato inglese fronte lago o panchine del pontile',
       diaperPoints: 'Camper a 2 minuti dal bagnasciuga',
@@ -129,7 +139,12 @@ export const EDEN_PART_2 = [
     gastronomy: {
       dishes: ['Polenta con funghi porcini della Valsugana', 'Vezzena DOP di malga', 'Frutti di bosco di Sant’Orsola'],
       recommendedSpots: 'Ristorante La Taverna sul lago (terrazza riscaldata vista acqua)'
-    }
+    },
+    specialSpots: [
+      { type: "Pasticceria Storica", name: "Pasticceria Milano", location: "Levico Terme (centro)", description: "Pasticceria artigianale storica del centro con biscotteria e torte da credenza della tradizione asburgica." },
+      { type: "Ristorante Slow Food", name: "Ristorante Boivin", location: "Levico Terme", description: "Chiocciola Slow Food con cucina del territorio, carni locali e formaggi tipici della Valsugana." },
+      { type: "Eco-Ristorazione", name: "Liberty Bistrot", location: "Levico Terme", description: "Cucina salutare ed eco-ristorazione trentina con prodotti bio a filiera corta." }
+    ]
   },
   {
     id: 8,

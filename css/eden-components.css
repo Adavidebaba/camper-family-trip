@@ -137,3 +137,109 @@
   background: var(--color-sage-100);
   transform: translateY(-1px);
 }
+
+/* Aree Sosta Camper Alternative & Gratuite */
+.camper-alt-section {
+  margin-top: 14px;
+  background: #fdfaf3;
+  border: 1px solid #faeccb;
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.camper-alt-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #8c5d10;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.camper-alt-card {
+  background: #ffffff;
+  border: 1px solid #f2e3c0;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.camper-alt-card:last-child {
+  margin-bottom: 0;
+}
+
+.camper-alt-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-main);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.camper-alt-services {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.why-omitted-note {
+  background: #fff8e6;
+  border-left: 3px solid #d99b26;
+  padding: 6px 10px;
+  font-size: 11.5px;
+  color: #734e06;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.4;
+}
+
+/* Card Opzione Extra Molveno & Dolomiti di Brenta */
+.molveno-extra-card {
+  background: linear-gradient(145deg, #fbfcfe, #f2f7fc);
+  border: 1.5px solid #cbe0f5;
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  margin-bottom: 22px;
+}
+
+.molveno-header {
+  font-size: 14px;
+  font-weight: 800;
+  color: #1a568c;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.molveno-why-omitted {
+  background: #fdf3f2;
+  border-left: 3.5px solid #d93829;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: #8c1e15;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 10px;
+  line-height: 1.45;
+}
+
+/* Locali Speciali (Pasticcerie, Bio, Agriturismi) */
+.special-spots-list {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.special-spot-item {
+  font-size: 12px;
+  color: var(--color-text-main);
+  background: #ffffff;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-card-border);
+}
+

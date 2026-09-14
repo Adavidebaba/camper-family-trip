@@ -65,7 +65,15 @@ export const EDEN_PART_3 = [
     gastronomy: {
       dishes: ['Bigoli con le sarde di lago', 'Tortellini di Valeggio sul Mincio', 'Gelato artigianale di Lazise'],
       recommendedSpots: 'Ristorante Pizzeria Cordonego (spazio per passeggino)'
-    }
+    },
+    specialSpots: [
+      { type: "Gelateria d'eccellenza", name: "La Cremeria di Lazise", location: "Lazise (centro)", description: "Gelato naturale artigianale preparato con latte fresco intero e dolci da passeggio." },
+      { type: "Agriturismo Km 0", name: "Agriturismo Le Tese", location: "Lazise", description: "Pasta fresca all'uovo tirata a mano, ortaggi di stagione e carni locali a filiera cortissima." },
+      { type: "Fattoria Biodinamica", name: "La Pesenata", location: "Colà di Lazise", description: "Coltivazioni biologiche naturali senza chimica, animali da cortile e degustazioni contadine all'aperto." }
+    ],
+    freeCamperAlternatives: [
+      { name: "Area di Sosta Località Pol", location: "Località Pol 18, Pastrengo", rating: "4.4 / 5", services: "Parcheggio pianeggiante e gratuito su asfalto", whyOmittedNote: "Dista circa 5 km da Lazise e 6 km dal parco termale di Colà. Sebbene comoda e gratuita, si trova nell'entroterra e costringe ad accendere e spostare il camper per raggiungere il lungolago e il centro a piedi con la carrozzina." }
+    ]
   },
   {
     id: 12,

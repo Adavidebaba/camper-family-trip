@@ -17,6 +17,9 @@ export class EdenItineraryDay extends ItineraryDay {
     this.rainPlan = data.rainPlan || {}; // { title, indoorActivity, notes }
     this.baseName = data.baseName || ''; // Nome della base di soggiorno (Riva, Comano, Levico, Lazise, Sarzana)
     this.nightsInBase = data.nightsInBase || 3; // Numero notti continuative
+    this.freeCamperAlternatives = data.freeCamperAlternatives || []; // array di alternative gratuite con note sul perché omesse
+    this.specialSpots = data.specialSpots || []; // pasticcerie d'eccellenza, ristoranti bio, agriturismi
+    this.molvenoOption = data.molvenoOption || null; // Opzione facoltativa Molveno con nota pediatrica
   }
 
   /**

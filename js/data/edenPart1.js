@@ -65,7 +65,14 @@ export const EDEN_PART_1 = [
     gastronomy: {
       dishes: ['Carne salada del Garda trentino', 'Olio extravergine DOP di Riva', 'Strudel di mele'],
       recommendedSpots: 'Ristorante La Colombera o asporto da consumare in camper'
-    }
+    },
+    specialSpots: [
+      { type: "Pasticceria d'eccellenza", name: "Garda Foodie", location: "Riva del Garda", description: "Lievitati soffici, sfoglie fragranti e monoporzioni artigianali con vista lago." },
+      { type: "Ristorante Bio", name: "Bio Essere Café & Bistrot", location: "Arco", description: "Cucina naturale biologica a base di ingredienti freschi di stagione." }
+    ],
+    freeCamperAlternatives: [
+      { name: "Parcheggio Caneve v.le Rovereto Arco", location: "Viale Rovereto 13, Arco", rating: "4.7 / 5", services: "Parcheggio comunale gratuito con camper service gratuito (carico e scarico)", whyOmittedNote: "Dista circa 5 km dalle spiagge di Riva del Garda. Sebbene collegata dalla ciclabile del fiume Sarca, non permette di uscire a piedi ogni giorno direttamente sul lungolago con la carrozzina senza dover spostare il camper." }
+    ]
   },
   {
     id: 2,
@@ -193,7 +200,11 @@ export const EDEN_PART_1 = [
     gastronomy: {
       dishes: ['Canederli al burro fuso e salvia', 'Torta di noci del Garda'],
       recommendedSpots: 'Ristorante Pizzeria Bavaria o Osteria La Contrada (centro storico)'
-    }
+    },
+    specialSpots: [
+      { type: "Frantoio & Cantina", name: "Madonna delle Vittorie", location: "Linfano / Arco", description: "Olio extravergine di oliva Garda DOP e cantina a filiera corta." },
+      { type: "Apicoltura Biologica", name: "Agriturismo Maso Bòtes", location: "Arco", description: "Apicoltura biologica con miele artigianale, asinelli e uliveto storico in collina." }
+    ]
   },
   {
     id: 4,
@@ -244,6 +255,9 @@ export const EDEN_PART_1 = [
       services: 'Allaccio 220V, camper service, colonnine ricarica, accesso diretto pedonale al parco',
       notes: 'Pianeggiante e tranquilla, vicinissima al centro abitato di Ponte Arche. Alternativa: parcheggi del parco.'
     },
+    freeCamperAlternatives: [
+      { name: "Trento Area Camper Zuffo", location: "Piazzale Zuffo, Trento", rating: "3.3 / 5", services: "Parcheggio comunale gratuito nelle prime 48 ore con camper service gratuito", whyOmittedNote: "Dista circa 18 km dalla Valle dei Laghi e da Comano Terme. Comoda per visitare Trento, ma costringerebbe a percorrere mezz'ora di strada ogni giorno per raggiungere il parco termale e le passeggiate con Eden." }
+    ],
     babyTips: {
       feedingSpots: 'Panchine coperte del gazebo centrale nel parco termale',
       diaperPoints: 'Servizi igienici del parco termale dotati di nursery riscaldata',
@@ -257,7 +271,11 @@ export const EDEN_PART_1 = [
     gastronomy: {
       dishes: ['Ciiuìga del Banale (Presidio Slow Food)', 'Noci del Bleggio', 'Formaggio Spressa delle Giudicarie DOP'],
       recommendedSpots: 'Trattoria Da Lucio o bottega contadina a Ponte Arche'
-    }
+    },
+    specialSpots: [
+      { type: "Ristorante con Vista", name: "Ristorante Bar Castel Toblino", location: "Lago di Toblino", description: "Cucina del territorio e vista romantica all'interno del castello cinquecentesco sull'acqua." },
+      { type: "Azienda Biodinamica", name: "Cantina Fratelli Pisoni", location: "Pergolese (Valle dei Laghi)", description: "Vini biologici naturali e confetture artigianali con certificazione Demeter." }
+    ]
   },
   {
     id: 5,
